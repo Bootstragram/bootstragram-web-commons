@@ -1,0 +1,237 @@
+//
+// Bootstragram Web Commons
+// Less Definitions
+//
+
+// We rely on Twitter Bootstrap to define our own stuff.
+// One day, maybe we should get rid of this dependency.
+@import "bootstrap.less";
+
+// Re-definitions of Twitter Bootstrap variables.
+@navbar-default-bg: #fff;
+
+// The Bootstragram color scheme and typo stuff, as defined by Jogo.
+@bootstragram-background-color: #fff;
+@bootstragram-color: #4c4d4f;
+@bootstragram-color-light: #b2b2b2;
+@bootstragram-accent-color-1: #db6149;
+@bootstragram-accent-color-2: #ecb39f;
+@bootstragram-accent-color-3: #db4045;
+@bootstragram-font-family: 'Titillium Web', 'Titillium', sans-serif;
+
+// Debug stuff
+@bootstragram-debug-background-color: orange;
+
+// Load Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900);
+
+// Mix-in Definitions
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+}
+
+.jumbotron-header (@var: 0px) {
+  font-weight: bold;
+  font-size: 42px;    
+}
+
+
+// Style really starts here...
+
+body {
+  background-color: @bootstragram-background-color;
+  color: @bootstragram-color;
+  font-family: @bootstragram-font-family;
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid @bootstragram-color-light;
+  .border-radius(10px);
+  padding: 10px;
+  margin: 2em;
+}
+
+.card-header {
+  position: absolute;
+  background-color: red;
+  margin: auto;
+}
+
+.card-icon {
+  position: float;
+  text-align: center;
+  top: -16px;
+}
+
+// Navbar
+
+nav.bootstragram {
+  border-top:    4px solid @bootstragram-accent-color-1;
+  border-bottom: 1px solid @bootstragram-color-light;
+  height: 92px;
+  
+  .brand {
+    width: 100%;
+    text-align: center;
+    margin-top: 26px;
+    
+    img {
+      width: 230px;
+    }
+  }
+  
+  .menu {
+    float: right;
+    position: relative;
+    right: 24px;
+    bottom: 36px;
+  }
+}
+
+// Footer
+
+footer.bootstragram {
+  border-top: 1px solid @bootstragram-color-light;
+  margin: 15px;
+  text-align: center;
+  padding-bottom: 75px;
+  color: @bootstragram-color;
+  
+  .bootstragram-logo {
+    position: relative;
+    top: -1px;
+    text-align: center;
+    border-top: thin solid @bootstragram-color;
+    margin: auto;
+    width: 130px;
+    padding-top: 46px;
+    padding-bottom: 22px;
+    
+    img {
+      width: 60px;
+    }
+  }
+  
+  .footer-text {
+    .footer-text-title {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-size: 18px;    
+    }
+    .footer-text-subtitle {
+      color: @bootstragram-color-light;
+      margin-bottom: 20px;
+      font-size: 20px;    
+    }
+    .footer-text-body {
+      margin-bottom: 36px;      
+    }    
+    .footer-icons-links {
+      font-size: 18px;
+      margin-bottom: 40px;
+
+      button {
+        .border-radius(@radius: 18px);
+        border: 1px solid @bootstragram-color-light;
+        background-color: transparent;
+        padding-top: 6px;
+        margin-left: 11px;
+        margin-right: 11px;
+        width: 36px;
+        height: 36px;
+      }
+      
+      button.negative {
+        background-color: @bootstragram-color;
+        color: white;
+      }
+      
+      button:hover {
+        border: 1px solid @bootstragram-accent-color-2;
+        background-color: @bootstragram-accent-color-1;
+        color: @bootstragram-background-color;
+      }
+      
+      a {
+        margin-left: 11px;
+        margin-right: 11px;
+        color: @bootstragram-color;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: @bootstragram-accent-color-1;
+      }
+    }
+  }
+  
+  button.action {
+    background-color: @bootstragram-color;
+    color: @bootstragram-background-color;
+    .border-radius(@radius: 24px);
+    height: 48px;
+    font-size: 18px;
+    padding-left: 48px;
+    padding-right: 48px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    span {
+      display: inline-block;
+      padding-top: 4px;
+      letter-spacing: 1px;
+    }
+  }
+  
+  button.action:hover {
+    background-color: @bootstragram-accent-color-1;
+  }
+}
+
+// Jumbotron
+
+#jumbotron {
+  height: 678px;
+  background-color: @bootstragram-color;
+
+  background-image: url(/assets/myRGBimage.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat:no-repeat;
+
+  text-align: center;
+  margin: 0px;
+  padding: 42px;
+  color: white;
+  
+  h1 {
+    color: white;
+    .jumbotron-header (@var: 0px)
+  }
+  
+  h2 {
+    color: @bootstragram-accent-color-1;
+    .jumbotron-header (@var: 0px)
+  }
+  
+  button {
+    height: 44px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding-left: 1em;
+    padding-right: 1em;
+    .border-radius (@radius: 22px)
+  }
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstragram Web Commons</title>
+  <meta name="description" content="A demo for Bootstragram Web Commons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstragram.min.css">
+</head>
+<body>
+  <nav class="bootstragram">
+    <div class="brand">
+      <img src="assets/logo-pixels-1.png" alt="Bootstragram Logo">
+    </div>
+    <div class="menu">
+      <i class="fa fa-bars fa-2x"></i>
+    </div>
+  </nav>
+  <div id="jumbotron">
+    <h1>COPA AMERICA 2015</h1>
+    <h2>STATIUMCAL</h2>
+    <p>NEVER MISS THE GAMES</p>
+    <button>
+      <span>
+        <i class="fa fa-apple fa-2x"></i>
+      </span>
+      <span>
+        Download the free app
+      </span>
+    </button>
+  </div>
+  <div id="main" class="container">
+    <div id="content">
+      <div>
+        <h2>Still Available</h2>
+
+        <div class="card">
+          <h1>Copa America 2015</h1>
+          <h2>StatiumCal</h2>
+          <hr>
+          <span>
+            <i class="fa fa-apple fa-2x"></i>
+          </span>
+          <span>
+            Download the free app
+          </span>
+        </div>
+
+        <div class="card">
+          <h1>How important is a team's goal difference?</h2>
+            <hr>
+            <span>
+              Read the full article
+            </span>
+          </div>
+
+          <div class="card">
+            <h1>Let's keep in touch</h1>
+            <hr>
+            <span>
+              Subscribe to our newsletter
+            </span>
+          </div>
+
+          <div class="card card-phone">
+            <div class="card-header">TOTO
+              <div class="card-icon"><i class="fa fa-mobile"></i></div>
+            </div>
+            Copa America 2015
+          </div>
+        </div>
+      
+        <div>
+          <h2>We're Sportmantic</h2>
+          <h3>Products.</h3>
+          <p class="lead">Bootstragram is a tech company based in Paris that is crafting great products with intense love.</p>
+          <p>Half of the time we're baking our own stuff, so that we keep free time to bake your stuff!</p>
+          <h3>Services.</h3>
+          <p class="lead">Bootstragram is a tech company based in Paris that is crafting great products with intense love.</p>
+          <p>Half of the time we're baking our own stuff, so that we keep free time to bake your stuff!</p>
+        </div>
+      
+        <div>
+          <button id="load-template">Load image</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bootstragram">
+    <div class="bootstragram-logo">
+      <img src="assets/logo-pixels-2.png" alt="Bootstragram Logo">
+    </div>
+    <div class="footer-text">
+      <div class="footer-text-title">Get in touch with us.</div>
+      <div class="footer-text-subtitle">info@bootstragram.com</div>
+      <div class="footer-text-body">Paris, France</div>
+      <div class="footer-icons-links">
+        <button class="positive"><i class="fa fa-facebook"></i></button>
+        <button class="negative"><i class="fa fa-twitter"></i></button>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div>
+      <button class="action">
+        <span>Get Support!</span>
+      </button>
+    </div>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <!-- <script src="js/plugins.js"></script> -->
+  <!-- <script src="js/main.js"></script> -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+  $(function() {
+    $("#load-template").click(function(e) {
+      if($('body').hasClass('debug')) {
+        $('body').css("background", "");
+      } else {
+        $('body').css("background", "url(/assets/480px_6columns.png) no-repeat");  
+      }
+      $('body').toggleClass("debug");
+    });
+  });
+  </script>
+</body>
+</html>

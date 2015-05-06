@@ -1,0 +1,25 @@
+{
+  "name": "bootstragram-web-commons",
+  "version": "0.0.0",
+  "authors": [
+    "Mickaël Floc'hlay <mick@bootstragram.com>"
+  ],
+  "description": "The JavaScript and CSS base for all Bootstragram's projects",
+  "main": "bootstragram.css",
+  "keywords": [
+    "bootstragram"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "components-font-awesome": "~4.2.0"
+  },
+  "license": "MIT",
+  "homepage": "http://bootstragram.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
