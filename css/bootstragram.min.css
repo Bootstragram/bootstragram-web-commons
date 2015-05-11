@@ -6703,11 +6703,13 @@ footer.bootstragram button.action:hover {
   color: white;
   font-weight: bold;
   font-size: 42px;
+  text-shadow: 1px 1px #4c4d4f;
 }
 #jumbotron h2 {
   color: #db6149;
   font-weight: bold;
   font-size: 42px;
+  text-shadow: 1px 1px #4c4d4f;
 }
 #jumbotron button {
   height: 44px;
