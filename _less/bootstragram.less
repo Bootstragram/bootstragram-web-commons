@@ -47,16 +47,64 @@ body {
 }
 
 h2 {
+  font-size: 1.5em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+}
+
+#main {
+section {
+  margin: 22px;
+}
 }
 
 .card {
   border: 1px solid @bootstragram-color-light;
   .border-radius(10px);
   padding: 10px;
-  margin: 2em;
+  margin: 3.2em auto; // Centered horizontally
+  width: 62.5%; // 300px / 480px = 0.625
+  cursor: pointer;
+  
+  h1 { // Formatting of a card title
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+    margin: 16px 0 0 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: @bootstragram-accent-color-1;
+  }
+  
+  .c2a {
+    margin-top: 1.4em;
+    padding: 1.3em 0 0.7em 0;
+    border-top: thin solid lighten(@bootstragram-color-light, 20%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 700;  
+    
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1em;    
+    }
+  }
+}
+
+.card:hover {
+  border: 1px solid @bootstragram-accent-color-1;
+  
+  .c2a {
+    color: @bootstragram-accent-color-1;
+  }
 }
 
 .card-header {
@@ -92,7 +140,18 @@ nav.bootstragram {
     float: right;
     position: relative;
     right: 24px;
-    bottom: 36px;
+    bottom: 50px;
+    
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 1em;
+    }
+    
+    button:hover {
+      background-color: @bootstragram-accent-color-1;
+      color: @bootstragram-background-color;
+    }
   }
 }
 
@@ -143,7 +202,7 @@ footer.bootstragram {
         .border-radius(@radius: 18px);
         border: 1px solid @bootstragram-color-light;
         background-color: transparent;
-        padding-top: 6px;
+        padding-top: 0px;
         margin-left: 11px;
         margin-right: 11px;
         width: 36px;
@@ -176,7 +235,7 @@ footer.bootstragram {
     }
   }
   
-  button.action {
+  button {
     background-color: @bootstragram-color;
     color: @bootstragram-background-color;
     .border-radius(@radius: 24px);
@@ -190,7 +249,7 @@ footer.bootstragram {
     
     span {
       display: inline-block;
-      padding-top: 4px;
+      padding-top: 0px;
       letter-spacing: 1px;
     }
   }
@@ -214,6 +273,7 @@ footer.bootstragram {
   text-align: center;
   margin: 0px;
   padding: 42px;
+  margin-bottom: 22px;
   color: white;
   
   h1 {
