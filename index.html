@@ -27,53 +27,82 @@
   
   <!-- JUMBOTRON -->
   <div id="jumbotron">
-    <div id="jumbomain">
-      <h1>COPA AMERICA 2015</h1>
-      <h2>STATIUMCAL</h2>
-      <p>NEVER MISS THE GAMES</p>
-      <button>
-        <span>
-          <i class="fa fa-apple fa-2x"></i>
-        </span>
-        <span>
-          Download the free app
-        </span>
-      </button>
-    </div>
+    <div id="jumbomain" data-background-url="/assets/myRGBimage.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-sm-push-5">
+            <div class="jumbohead">
+              <h1>WEB COMMONS</h1>
+              <h2>VERSION 1.0</h2>
+              <p>A template to start all Bootstragram's Web projects.</p>
+              <p>
+                This part is the Jumbotron part. It sticks above the fold, and is nicely responsive: see
+                how the phone will adapt its position if you resize the window.
+              </p>
+              <p id="bsg-debug">
+                Here is a debug console.
+              </p>
+              <a href="https://github.com/Bootstragram/bootstragram-web-commons" class="btn">
+                <span>
+                  <i class="fa fa-github fa-2x"></i>
+                </span>
+                <span>
+                  See on GitHub
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-5 col-sm-pull-7">
+            <div id="jumbo-image">
+              <img src="/assets/phone-template.png">
+            </div>
+          </div>
+        </div><!-- row -->
+        <div class="clearfix"></div>
+      </div><!-- container -->
+    </div><!-- jumbomain -->
     <div id="jumbostill" class="container">
       <h2>Still Available</h2>
-
-      <div class="card">
-        <h1>Copa America 2015</h1>
-        <h2>StatiumCal</h2>
-        <div class="c2a">
-          <span>
-            <i class="fa fa-apple fa-2x"></i>
-          </span>
-          <span>
-            Download the free app
-          </span>
+      
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <h1>Copa America 2015</h1>
+            <h2>StatiumCal</h2>
+            <div class="c2a">
+              <span>
+                <i class="fa fa-apple fa-2x"></i>
+              </span>
+              <span>
+                Download the free app
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <h1>How important is a team's goal difference?</h1>
-        <div class="c2a">
-          <span>
-            Read the full article
-          </span>
+        <div class="col-sm-4">
+          <div class="card">
+            <h1>How important is a team's goal difference?</h1>
+            <div class="c2a">
+              <span>
+                Read the full article
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <h1>Let's keep<br>in touch</h1>
-        <div class="c2a">
-          <span>
-            Subscribe to our newsletter
-          </span>
+        <div class="col-sm-4">
+          <div class="card">
+            <h1>Let's keep<br>in touch</h1>
+            <div class="c2a">
+              <span>
+                Subscribe to our newsletter
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </div><!-- row -->
+    </div><!-- jumbostill -->
   </div><!-- jumbotron -->
   
   <div id="main" class="container">
@@ -98,30 +127,44 @@
   </div><!-- container -->
   
   <footer class="bootstragram">
-    <div class="bootstragram-logo">
-      <img src="assets/logo-pixels-2.png" alt="Bootstragram Logo">
-    </div>
-    <div class="footer-text">
-      <div class="footer-text-title">Get in touch with us.</div>
-      <div class="footer-text-subtitle">info@bootstragram.com</div>
-      <div class="footer-text-body">Paris, France</div>
-      <div class="footer-icons-links">
-        <button class="positive"><i class="fa fa-facebook"></i></button>
-        <button class="negative"><i class="fa fa-twitter"></i></button>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-    <div>
-      <button class="action">
-        <span>Get Support!</span>
-      </button>
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="bootstragram-logo">
+            <img src="assets/logo-pixels-2.png" alt="Bootstragram Logo">
+            <div class="footer-text">
+              <div class="footer-text-title">Get in touch with us.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="footer-text">
+            <div class="footer-text-title">Get in touch with us.</div>
+            <div class="footer-text-subtitle">info@bootstragram.com</div>
+            <div class="footer-text-body">Paris, France</div>
+            <div class="footer-icons-links">
+              <button class="positive"><i class="fa fa-facebook"></i></button>
+              <button class="negative"><i class="fa fa-twitter"></i></button>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <button class="action">
+              <span>Get Support!</span>
+            </button>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div><!-- container -->
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
   <!-- <script src="js/plugins.js"></script> -->
   <!-- <script src="js/main.js"></script> -->
+  <script src="_javascript/bootstragram.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
   $(function() {

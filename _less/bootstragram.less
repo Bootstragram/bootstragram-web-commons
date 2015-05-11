@@ -50,7 +50,6 @@ h2 {
   font-size: 1.5em;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
 }
 
 // Navbar
@@ -93,6 +92,13 @@ nav.bootstragram {
 
 footer.bootstragram {
   border-top: 1px solid @bootstragram-color-light;
+  
+  .container {
+    padding-top: 2.875em;    
+    border-top: thin solid @bootstragram-color;
+    top: -1px;
+  }
+  
   margin: 15px;
   text-align: center;
   padding-bottom: 75px;
@@ -100,12 +106,9 @@ footer.bootstragram {
   
   .bootstragram-logo {
     position: relative;
-    top: -1px;
     text-align: center;
-    border-top: thin solid @bootstragram-color;
     margin: auto;
     width: 130px;
-    padding-top: 46px;
     padding-bottom: 22px;
     
     img {
@@ -169,7 +172,7 @@ footer.bootstragram {
     }
   }
   
-  button {
+  button.action {
     background-color: @bootstragram-color;
     color: @bootstragram-background-color;
     .border-radius(@radius: 24px);
@@ -196,17 +199,20 @@ footer.bootstragram {
 // Jumbotron
 
 #jumbotron {
+  background-color: darken(@bootstragram-background-color, 2%);
+  padding: 0;
+  margin: 0;
+
   #jumbomain {
-    height: 678px;
-    background-image: url(/assets/myRGBimage.png);
-    background-color: @bootstragram-color;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 680px;
+
     background-position: center center;
     background-size: cover;
-    background-repeat:no-repeat;
+    
     text-align: center;
-    margin: 0px;
-    padding: 42px;
-    margin-bottom: 22px;
     color: white;
     h1 {
       color: white;
@@ -220,14 +226,41 @@ footer.bootstragram {
       text-shadow: 1px 1px @bootstragram-color;
     }
   
-    button {
+    a, button {
+      color: inherit;
       height: 44px;
       background-color: transparent;
       border: 2px solid white;
       padding-left: 1em;
       padding-right: 1em;
-      .border-radius (@radius: 22px)
+      .border-radius (@radius: 22px); 
+      text-transform: uppercase;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;    
+      }
     }  
+    
+    a:hover {
+      background-color: @bootstragram-accent-color-1;
+      color: white;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  #jumbostill {
+    z-index: 3;
+  }
+  
+  .jumbohead {
+    text-align: center;
+    @media (min-width: @screen-sm-min) { text-align: left; }
+    vertical-align: middle;
   }
   
   .card {
@@ -235,7 +268,11 @@ footer.bootstragram {
     .border-radius(10px);
     padding: 10px;
     margin: 3.2em auto; // Centered horizontally
-    width: 62.5%; // 300px / 480px = 0.625
+
+    // In a mono-column setup, we don't want the card to take 100% of the available space
+    max-width: 66%; 
+    @media (min-width: @screen-sm-min) { max-width: none; }
+    
     cursor: pointer;
   
     h1 { // Formatting of a card title
@@ -276,5 +313,11 @@ footer.bootstragram {
     .c2a {
       color: @bootstragram-accent-color-1;
     }
+  }
+}
+
+#main {
+  h2 {
+    text-align: center;
   }
 }

@@ -13,23 +13,9 @@ grunt.initConfig({
     }
   },
   uglify: {
-    jquery: {
+    bootstragram: {
       files: {
-        'assets/js/jquery.min.js': 'bower_components/jquery/jquery.js'
-      }
-    },
-    bootstrap: {
-      files: {
-        'assets/js/bootstrap.min.js': ['bower_components/bootstrap/js/collapse.js',
-                                       'bower_components/bootstrap/js/scrollspy.js',
-                                       'bower_components/bootstrap/js/tooltip.js',
-                                       'bower_components/bootstrap/js/button.js',
-                                       'bower_components/bootstrap/js/affix.js']
-      }
-    },
-    deadrooster: {
-      files: {
-        'assets/js/deadrooster.min.js': 'assets/_javascript/deadrooster.js'
+        'js/bootstragram.min.js': '_javascript/bootstragram.js'
       }
     }
   },
@@ -44,16 +30,8 @@ grunt.initConfig({
   coffee: {
     compile: {
       files: {
-        'assets/_javascript/deadrooster.js': 'assets/_coffeescript/deadrooster.js.coffee'
+        '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee'
       }
-    }
-  },
-  exec: {
-    build: {
-      cmd: 'jekyll build'
-    },
-    serve: {
-      cmd: 'jekyll serve --watch'
     }
   }
 });
@@ -65,7 +43,7 @@ grunt.loadNpmTasks('grunt-contrib-coffee');
 grunt.loadNpmTasks('grunt-exec');
 
 grunt.registerTask('javascript', [ 'coffee', 'uglify' ])
-grunt.registerTask('default', [ 'less', 'coffee', 'uglify', 'copy', 'exec:build' ]);
+grunt.registerTask('default', [ 'less', 'coffee', 'uglify', 'copy' ]);
 grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
 
 };
