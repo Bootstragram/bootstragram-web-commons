@@ -53,72 +53,6 @@ h2 {
   text-align: center;
 }
 
-#main {
-section {
-  margin: 22px;
-}
-}
-
-.card {
-  border: 1px solid @bootstragram-color-light;
-  .border-radius(10px);
-  padding: 10px;
-  margin: 3.2em auto; // Centered horizontally
-  width: 62.5%; // 300px / 480px = 0.625
-  cursor: pointer;
-  
-  h1 { // Formatting of a card title
-    text-transform: uppercase;
-    font-size: 1.6em;
-    font-weight: 600;
-    text-align: center;
-    margin: 16px 0 0 0;
-    padding: 0;
-  }
-  
-  h2 {
-    margin: 0;
-    padding: 0;
-    color: @bootstragram-accent-color-1;
-  }
-  
-  .c2a {
-    margin-top: 1.4em;
-    padding: 1.3em 0 0.7em 0;
-    border-top: thin solid lighten(@bootstragram-color-light, 20%);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 0.9em;
-    font-weight: 700;  
-    
-    span {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 1em;    
-    }
-  }
-}
-
-.card:hover {
-  border: 1px solid @bootstragram-accent-color-1;
-  
-  .c2a {
-    color: @bootstragram-accent-color-1;
-  }
-}
-
-.card-header {
-  position: absolute;
-  background-color: red;
-  margin: auto;
-}
-
-.card-icon {
-  position: float;
-  text-align: center;
-  top: -16px;
-}
-
 // Navbar
 
 nav.bootstragram {
@@ -262,38 +196,85 @@ footer.bootstragram {
 // Jumbotron
 
 #jumbotron {
-  height: 678px;
-  background-color: @bootstragram-color;
-
-  background-image: url(/assets/myRGBimage.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat:no-repeat;
-
-  text-align: center;
-  margin: 0px;
-  padding: 42px;
-  margin-bottom: 22px;
-  color: white;
-  
-  h1 {
+  #jumbomain {
+    height: 678px;
+    background-image: url(/assets/myRGBimage.png);
+    background-color: @bootstragram-color;
+    background-position: center center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-align: center;
+    margin: 0px;
+    padding: 42px;
+    margin-bottom: 22px;
     color: white;
-    .jumbotron-header (@var: 0px);
-    text-shadow: 1px 1px @bootstragram-color;
+    h1 {
+      color: white;
+      .jumbotron-header (@var: 0px);
+      text-shadow: 1px 1px @bootstragram-color;
+    }
+  
+    h2 {
+      color: @bootstragram-accent-color-1;
+      .jumbotron-header (@var: 0px);
+      text-shadow: 1px 1px @bootstragram-color;
+    }
+  
+    button {
+      height: 44px;
+      background-color: transparent;
+      border: 2px solid white;
+      padding-left: 1em;
+      padding-right: 1em;
+      .border-radius (@radius: 22px)
+    }  
   }
   
-  h2 {
-    color: @bootstragram-accent-color-1;
-    .jumbotron-header (@var: 0px);
-    text-shadow: 1px 1px @bootstragram-color;
-  }
+  .card {
+    border: 1px solid @bootstragram-color-light;
+    .border-radius(10px);
+    padding: 10px;
+    margin: 3.2em auto; // Centered horizontally
+    width: 62.5%; // 300px / 480px = 0.625
+    cursor: pointer;
   
-  button {
-    height: 44px;
-    background-color: transparent;
-    border: 2px solid white;
-    padding-left: 1em;
-    padding-right: 1em;
-    .border-radius (@radius: 22px)
+    h1 { // Formatting of a card title
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 600;
+      text-align: center;
+      margin: 16px 0 0 0;
+      padding: 0;
+    }
+  
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: @bootstragram-accent-color-1;
+    }
+  
+    .c2a {
+      margin-top: 1.4em;
+      padding: 1.3em 0 0.7em 0;
+      border-top: thin solid lighten(@bootstragram-color-light, 20%);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: 700;  
+    
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;    
+      }
+    }
+  }
+
+  .card:hover {
+    border: 1px solid @bootstragram-accent-color-1;
+  
+    .c2a {
+      color: @bootstragram-accent-color-1;
+    }
   }
 }

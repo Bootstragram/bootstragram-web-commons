@@ -6559,62 +6559,6 @@ h2 {
   text-transform: uppercase;
   text-align: center;
 }
-#main section {
-  margin: 22px;
-}
-.card {
-  border: 1px solid #b2b2b2;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 3.2em auto;
-  width: 62.5%;
-  cursor: pointer;
-}
-.card h1 {
-  text-transform: uppercase;
-  font-size: 1.6em;
-  font-weight: 600;
-  text-align: center;
-  margin: 16px 0 0 0;
-  padding: 0;
-}
-.card h2 {
-  margin: 0;
-  padding: 0;
-  color: #db6149;
-}
-.card .c2a {
-  margin-top: 1.4em;
-  padding: 1.3em 0 0.7em 0;
-  border-top: thin solid #e5e5e5;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 0.9em;
-  font-weight: 700;
-}
-.card .c2a span {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1em;
-}
-.card:hover {
-  border: 1px solid #db6149;
-}
-.card:hover .c2a {
-  color: #db6149;
-}
-.card-header {
-  position: absolute;
-  background-color: red;
-  margin: auto;
-}
-.card-icon {
-  position: float;
-  text-align: center;
-  top: -16px;
-}
 nav.bootstragram {
   border-top: 4px solid #db6149;
   border-bottom: 1px solid #b2b2b2;
@@ -6735,10 +6679,10 @@ footer.bootstragram button span {
 footer.bootstragram button.action:hover {
   background-color: #db6149;
 }
-#jumbotron {
+#jumbotron #jumbomain {
   height: 678px;
-  background-color: #4c4d4f;
   background-image: url(/assets/myRGBimage.png);
+  background-color: #4c4d4f;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6748,19 +6692,19 @@ footer.bootstragram button.action:hover {
   margin-bottom: 22px;
   color: white;
 }
-#jumbotron h1 {
+#jumbotron #jumbomain h1 {
   color: white;
   font-weight: bold;
   font-size: 42px;
   text-shadow: 1px 1px #4c4d4f;
 }
-#jumbotron h2 {
+#jumbotron #jumbomain h2 {
   color: #db6149;
   font-weight: bold;
   font-size: 42px;
   text-shadow: 1px 1px #4c4d4f;
 }
-#jumbotron button {
+#jumbotron #jumbomain button {
   height: 44px;
   background-color: transparent;
   border: 2px solid white;
@@ -6769,4 +6713,47 @@ footer.bootstragram button.action:hover {
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   border-radius: 22px;
+}
+#jumbotron .card {
+  border: 1px solid #b2b2b2;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3.2em auto;
+  width: 62.5%;
+  cursor: pointer;
+}
+#jumbotron .card h1 {
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px 0 0 0;
+  padding: 0;
+}
+#jumbotron .card h2 {
+  margin: 0;
+  padding: 0;
+  color: #db6149;
+}
+#jumbotron .card .c2a {
+  margin-top: 1.4em;
+  padding: 1.3em 0 0.7em 0;
+  border-top: thin solid #e5e5e5;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+#jumbotron .card .c2a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+#jumbotron .card:hover {
+  border: 1px solid #db6149;
+}
+#jumbotron .card:hover .c2a {
+  color: #db6149;
 }
