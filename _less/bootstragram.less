@@ -8,7 +8,19 @@
 @import "bootstrap.less";
 
 // Re-definitions of Twitter Bootstrap variables.
-@navbar-default-bg: #fff;
+@navbar-default-bg:                #fff;
+@navbar-height:                    92px;
+@navbar-margin-bottom:             0px;
+
+// Mixes of Bootstrap and custom Bootstragram stuff
+@navbar-bootstragram-logo-height:            41px;
+@navbar-brand-bootstragram-padding-vertical: floor((@navbar-height - @navbar-bootstragram-logo-height) / 2);
+
+@bootstragram-navbar-bar-font-size-base:       10px;
+@bootstragram-navbar-bar-line-height-computed: floor(@bootstragram-navbar-bar-font-size-base * @line-height-base);
+@navbar-bootstragram-padding-vertical:         floor(@bootstragram-navbar-bar-line-height-computed * (@line-height-base - 1));
+@navbar-bootstragram-margin-vertical:          floor((@navbar-height - 2 * @navbar-bootstragram-padding-vertical - @bootstragram-navbar-bar-line-height-computed) / 2);
+@bootstragram-navbar-bar-active-radius:        floor((@bootstragram-navbar-bar-line-height-computed + 2 * @navbar-bootstragram-padding-vertical) / 2);
 
 // The Bootstragram color scheme and typo stuff, as defined by Jogo.
 @bootstragram-background-color: #fff;
@@ -54,38 +66,40 @@ h2 {
 
 // Navbar
 
-nav.bootstragram {
+nav.navbar {
   border-top:    4px solid @bootstragram-accent-color-1;
   border-bottom: 1px solid @bootstragram-color-light;
-  height: 92px;
-  
-  .brand {
-    width: 100%;
-    text-align: center;
-    margin-top: 26px;
-    
-    img {
-      width: 230px;
-    }
+  img {
+    height: @navbar-bootstragram-logo-height; // The logo should be this size
   }
   
-  .menu {
-    float: right;
-    position: relative;
-    right: 24px;
-    bottom: 50px;
-    
-    button {
-      background-color: transparent;
-      border: none;
-      padding: 1em;
-    }
-    
-    button:hover {
-      background-color: @bootstragram-accent-color-1;
-      color: @bootstragram-background-color;
-    }
-  }
+}
+
+.navbar-brand {
+  padding: @navbar-brand-bootstragram-padding-vertical @navbar-padding-horizontal;
+}
+
+.navbar-nav > li > a {
+  font-size:      @bootstragram-navbar-bar-font-size-base;
+  font-weight:    600;
+  line-height:    @bootstragram-navbar-bar-line-height-computed;
+  padding-top:    @navbar-bootstragram-padding-vertical;
+  padding-bottom: @navbar-bootstragram-padding-vertical;
+  
+  //TODO replace margins by inline-block vertically centered?
+  margin-top: @navbar-bootstragram-margin-vertical;
+  margin-bottom: @navbar-bootstragram-margin-vertical;
+  
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    .border-radius(@radius: @bootstragram-navbar-bar-active-radius);
+    color: white;
+    background-color: @bootstragram-accent-color-1;
+}
+
+nav.bootstragram {
 }
 
 // Footer
@@ -211,6 +225,8 @@ footer.bootstragram {
 
     background-position: center center;
     background-size: cover;
+    
+    overflow: hidden;
     
     text-align: center;
     color: white;

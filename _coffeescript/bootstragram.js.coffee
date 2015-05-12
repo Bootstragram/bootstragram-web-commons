@@ -6,4 +6,3 @@ jQuery ->
     # Cut the jumbomain at the fold and set the background image
     $('#jumbomain').css('height', ($(window).height() - $('#jumbotron').offset().top) + 'px')
     $('#jumbomain').css('background-image', 'url(' + $('#jumbomain').data('background-url') + ')')
-        
