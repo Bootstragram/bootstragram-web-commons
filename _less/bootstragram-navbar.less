@@ -1,0 +1,83 @@
+// Navbar
+
+// Re-definitions of Twitter Bootstrap variables.
+@navbar-default-bg:                #fff;
+@navbar-height:                    92px;
+@navbar-margin-bottom:             0px;
+
+// Mixes of Bootstrap and custom Bootstragram stuff
+@navbar-bootstragram-logo-height:            41px;
+@navbar-brand-bootstragram-padding-vertical: floor((@navbar-height - @navbar-bootstragram-logo-height) / 2);
+
+@bootstragram-navbar-bar-font-size-base:       10px;
+@bootstragram-navbar-bar-line-height-computed: floor(@bootstragram-navbar-bar-font-size-base * @line-height-base);
+@navbar-bootstragram-padding-vertical:         floor(@bootstragram-navbar-bar-line-height-computed * (@line-height-base - 1));
+@navbar-bootstragram-margin-vertical:          floor((@navbar-height - 2 * @navbar-bootstragram-padding-vertical - @bootstragram-navbar-bar-line-height-computed) / 2);
+@bootstragram-navbar-bar-active-radius:        floor((@bootstragram-navbar-bar-line-height-computed + 2 * @navbar-bootstragram-padding-vertical) / 2);
+
+@bootstragram-navbar-bar-font-size-base-ZOOM:       30px;
+@bootstragram-navbar-bar-line-height-computed-ZOOM: floor(@bootstragram-navbar-bar-font-size-base-ZOOM * @line-height-base);
+
+nav.navbar {
+  border-top:    4px solid @bootstragram-accent-color-1;
+  border-bottom: 1px solid @bootstragram-color-light;
+  img {
+    height: @navbar-bootstragram-logo-height; // The logo should be this size
+  }
+  
+}
+
+.navbar-brand {
+  padding: @navbar-brand-bootstragram-padding-vertical @navbar-padding-horizontal;
+}
+
+.navbar-default {
+  .navbar-nav > li > a {
+    // Common attributes: collapsed and not collapsed
+    font-weight:    600;
+
+    text-transform: uppercase;
+    
+    &:hover, 
+    &:focus {
+      color: @bootstragram-accent-color-1;
+    }
+
+    // Collapsed only (eg BIGGER)
+    font-size:      @bootstragram-navbar-bar-font-size-base-ZOOM;
+    line-height:    @bootstragram-navbar-bar-line-height-computed-ZOOM;
+    text-align: center;
+    //padding-top: 0.2em;
+    //padding-bottom: 0.2em;
+    
+    // Not-collapsed (eg SMALLER)
+    @media (min-width: @grid-float-breakpoint) {
+      padding-top:    @navbar-bootstragram-padding-vertical;
+      padding-bottom: @navbar-bootstragram-padding-vertical;
+      font-size:      @bootstragram-navbar-bar-font-size-base;
+      line-height:    @bootstragram-navbar-bar-line-height-computed;
+      text-align: left;
+      //TODO replace margins by inline-block vertically centered?
+      margin-top: @navbar-bootstragram-margin-vertical;
+      margin-bottom: @navbar-bootstragram-margin-vertical;
+    }
+  }
+  
+  .navbar-toggle {
+    border: none;
+  }
+}
+
+.navbar-default .navbar-nav > .active > a {
+  @media (min-width: @grid-float-breakpoint) {
+    .border-radius(@radius: @bootstragram-navbar-bar-active-radius);
+  }
+
+  color: white;
+  background-color: @bootstragram-accent-color-1;
+
+  &:hover {
+    background-color: @bootstragram-accent-color-2;
+    color: @bootstragram-accent-color-1;
+  }
+}

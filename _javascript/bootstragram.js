@@ -1,13 +1,11 @@
 (function() {
   jQuery(function() {
     var jumboCollapsingMinWidth, jumboHeadHeight, jumboHeight, jumboImageHeight;
-    $('#bsg-debug').append("jQuery has loaded. ");
     jumboCollapsingMinWidth = 768;
     $('#jumbomain').css('background-image', 'url(' + $('#jumbomain').data('background-url') + ')');
-    jumboHeight = $(window).height() - $('#jumbotron').offset().top;
+    jumboHeight = Math.max($(window).height() - $('#jumbotron').offset().top, 680);
     jumboHeadHeight = $('#jumbohead').height();
     jumboImageHeight = $('#jumbo-image').height();
-    $('#bsg-debug').append("Size1: " + jumboHeight + ", Size2: " + jumboHeadHeight + ", Size3: " + jumboImageHeight);
     if (jumboHeadHeight < jumboHeight) {
       $('#jumbomain').css('height', jumboHeight + 'px');
       if ($(window).width() > jumboCollapsingMinWidth) {
@@ -17,10 +15,13 @@
         }
       }
     }
-    return $('#bootstragram-menu-collapse').on('show.bs.collapse', function() {
+    $('#bootstragram-menu-collapse').on('show.bs.collapse', function() {
       return $('#nav-button-icon').removeClass('fa-bars').addClass('fa-close');
     }).on('hide.bs.collapse', function() {
       return $('#nav-button-icon').addClass('fa-bars').removeClass('fa-close');
+    });
+    return $('button[data-href]').click(function() {
+      return window.location.href = $(this).data('href');
     });
   });
 

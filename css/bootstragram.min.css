@@ -6553,11 +6553,6 @@ body {
   color: #4c4d4f;
   font-family: 'Titillium Web', 'Titillium', sans-serif;
 }
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 nav.navbar {
   border-top: 4px solid #db6149;
   border-bottom: 1px solid #b2b2b2;
@@ -6608,103 +6603,6 @@ nav.navbar img {
   background-color: #ecb39f;
   color: #db6149;
 }
-footer.bootstragram {
-  border-top: 1px solid #b2b2b2;
-  margin: 15px;
-  text-align: center;
-  padding-bottom: 75px;
-  color: #4c4d4f;
-}
-footer.bootstragram .container {
-  padding-top: 2.875em;
-  border-top: thin solid #4c4d4f;
-  top: -1px;
-}
-footer.bootstragram .bootstragram-logo {
-  position: relative;
-  text-align: center;
-  margin: auto;
-  width: 130px;
-  padding-bottom: 22px;
-}
-footer.bootstragram .bootstragram-logo img {
-  width: 60px;
-}
-footer.bootstragram .footer-text .footer-text-title {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  font-size: 18px;
-}
-footer.bootstragram .footer-text .footer-text-subtitle {
-  color: #b2b2b2;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-footer.bootstragram .footer-text .footer-text-body {
-  margin-bottom: 36px;
-}
-footer.bootstragram .footer-text .footer-icons-links {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-footer.bootstragram .footer-text .footer-icons-links button {
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
-  border-radius: 18px;
-  border: 1px solid #b2b2b2;
-  background-color: transparent;
-  padding-top: 0px;
-  margin-left: 11px;
-  margin-right: 11px;
-  width: 36px;
-  height: 36px;
-}
-footer.bootstragram .footer-text .footer-icons-links button.negative {
-  background-color: #4c4d4f;
-  color: white;
-}
-footer.bootstragram .footer-text .footer-icons-links button:hover {
-  border: 1px solid #ecb39f;
-  background-color: #db6149;
-  color: #ffffff;
-}
-footer.bootstragram .footer-text .footer-icons-links a {
-  margin-left: 11px;
-  margin-right: 11px;
-  color: #4c4d4f;
-  font-weight: bold;
-  font-size: 24px;
-}
-footer.bootstragram .footer-text .footer-icons-links a:hover {
-  text-decoration: none;
-  color: #db6149;
-}
-footer.bootstragram button.action {
-  background-color: #4c4d4f;
-  color: #ffffff;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  border-radius: 24px;
-  height: 48px;
-  font-size: 18px;
-  padding-left: 48px;
-  padding-right: 48px;
-  border: none;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-footer.bootstragram button.action span {
-  display: inline-block;
-  padding-top: 0px;
-  letter-spacing: 1px;
-}
-footer.bootstragram button.action:hover {
-  background-color: #db6149;
-}
-#main h2 {
-  text-align: center;
-}
 #jumbotron {
   background-color: #fafafa;
   padding: 0;
@@ -6722,22 +6620,32 @@ footer.bootstragram button.action:hover {
   color: white;
 }
 #jumbotron #jumbomain h1 {
-  font-size: color: white;
+  color: white;
   font-weight: bold;
-  font-size: 4.2857142857em;
+  font-size: 3em;
   line-height: 1em;
   padding: 0;
   margin: 0;
   letter-spacing: -1px;
 }
+@media (min-width: 768px) {
+  #jumbotron #jumbomain h1 {
+    font-size: 4.2857142857em;
+  }
+}
 #jumbotron #jumbomain h2 {
   color: #db6149;
   font-weight: bold;
-  font-size: 4.2857142857em;
+  font-size: 3em;
   line-height: 1em;
   padding: 0;
   margin: 0;
   letter-spacing: -1px;
+}
+@media (min-width: 768px) {
+  #jumbotron #jumbomain h2 {
+    font-size: 4.2857142857em;
+  }
 }
 #jumbotron #jumbomain a,
 #jumbotron #jumbomain button {
@@ -6777,16 +6685,15 @@ footer.bootstragram button.action:hover {
 #jumbotron #jumbostill {
   z-index: 3;
 }
-#jumbotron #jumbohead {
+#jumbotron #jumbostill h2 {
+  font-size: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 0em;
   text-align: center;
-  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 600;
 }
-@media (min-width: 768px) {
-  #jumbotron #jumbohead {
-    text-align: left;
-  }
-}
-#jumbotron .card {
+#jumbotron #jumbostill .card {
   border: 1px solid #b2b2b2;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -6797,11 +6704,11 @@ footer.bootstragram button.action:hover {
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  #jumbotron .card {
+  #jumbotron #jumbostill .card {
     max-width: none;
   }
 }
-#jumbotron .card h1 {
+#jumbotron #jumbostill .card h1 {
   text-transform: uppercase;
   font-size: 1.6em;
   font-weight: 600;
@@ -6809,12 +6716,12 @@ footer.bootstragram button.action:hover {
   margin: 16px 0 0 0;
   padding: 0;
 }
-#jumbotron .card h2 {
+#jumbotron #jumbostill .card h2 {
   margin: 0;
   padding: 0;
   color: #db6149;
 }
-#jumbotron .card .c2a {
+#jumbotron #jumbostill .card .c2a {
   margin-top: 1.4em;
   padding: 1.3em 0 0.7em 0;
   border-top: thin solid #e5e5e5;
@@ -6823,14 +6730,139 @@ footer.bootstragram button.action:hover {
   font-size: 0.9em;
   font-weight: 700;
 }
-#jumbotron .card .c2a span {
+#jumbotron #jumbostill .card .c2a span {
   display: inline-block;
   vertical-align: middle;
   margin-right: 1em;
 }
-#jumbotron .card:hover {
+#jumbotron #jumbostill .card:hover {
   border: 1px solid #db6149;
 }
-#jumbotron .card:hover .c2a {
+#jumbotron #jumbostill .card:hover .c2a {
   color: #db6149;
+}
+#jumbotron #jumbohead {
+  margin: 1em 0;
+  text-align: center;
+  vertical-align: middle;
+}
+@media (min-width: 768px) {
+  #jumbotron #jumbohead {
+    text-align: left;
+  }
+}
+#main {
+  margin-bottom: 5em;
+}
+#main h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+#main h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+footer.bootstragram {
+  border-top: 1px solid #e5e5e5;
+  margin: 15px;
+  padding-bottom: 75px;
+  color: #4c4d4f;
+  text-align: center;
+}
+footer.bootstragram .container {
+  padding-top: 2.875em;
+}
+@media (min-width: 768px) {
+  footer.bootstragram {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  footer.bootstragram .bootstragram-logo {
+    display: inline-block;
+  }
+}
+footer.bootstragram .bootstragram-logo img {
+  width: 60px;
+}
+footer.bootstragram .footer-text .footer-text-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+footer.bootstragram .footer-text .footer-text-subtitle {
+  color: #b2b2b2;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+footer.bootstragram .footer-text .footer-text-body {
+  margin-bottom: 36px;
+}
+footer.bootstragram .footer-text .footer-icons-links {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+footer.bootstragram .footer-text .footer-icons-links button {
+  padding: 0;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  border: 1px solid #b2b2b2;
+  background-color: transparent;
+  margin-right: 11px;
+  width: 36px;
+  height: 36px;
+}
+footer.bootstragram .footer-text .footer-icons-links button span {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+footer.bootstragram .footer-text .footer-icons-links button.negative {
+  background-color: #4c4d4f;
+  color: white;
+}
+footer.bootstragram .footer-text .footer-icons-links button:hover {
+  border: 1px solid #ecb39f;
+  background-color: #db6149;
+  color: #ffffff;
+}
+footer.bootstragram .footer-text .footer-icons-links a {
+  margin-left: 11px;
+  margin-right: 11px;
+  color: #4c4d4f;
+  font-weight: bold;
+  font-size: 24px;
+}
+footer.bootstragram .footer-text .footer-icons-links a:hover {
+  text-decoration: none;
+  color: #db6149;
+}
+footer.bootstragram button.action {
+  background-color: #4c4d4f;
+  color: #ffffff;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  height: 48px;
+  font-size: 18px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+footer.bootstragram button.action span {
+  display: inline-block;
+  padding-top: 0px;
+  letter-spacing: 1px;
+}
+footer.bootstragram button.action:hover {
+  background-color: #db6149;
 }

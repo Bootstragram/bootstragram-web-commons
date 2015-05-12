@@ -1,7 +1,7 @@
-# This is all the JavaScript required for the DeadRooster blog
+# This is all the JavaScript required for the Bootstragram Web Commons project.
 
 jQuery ->
-    $('#bsg-debug').append("jQuery has loaded. ")
+    #$('#bsg-debug').append("jQuery has loaded. ")
 
     # Variables
     jumboCollapsingMinWidth = 768
@@ -10,10 +10,9 @@ jQuery ->
     $('#jumbomain').css('background-image', 'url(' + $('#jumbomain').data('background-url') + ')')
 
     # Cut the jumbomain at the fold and center the jumbohead
-    jumboHeight = $(window).height() - $('#jumbotron').offset().top
+    jumboHeight = Math.max($(window).height() - $('#jumbotron').offset().top, 680)
     jumboHeadHeight = $('#jumbohead').height()
     jumboImageHeight = $('#jumbo-image').height()
-    $('#bsg-debug').append("Size1: " + jumboHeight + ", Size2: " + jumboHeadHeight + ", Size3: " + jumboImageHeight)
     if jumboHeadHeight < jumboHeight
         $('#jumbomain').css('height', jumboHeight + 'px')
         if $(window).width() > jumboCollapsingMinWidth
@@ -28,4 +27,8 @@ jQuery ->
         $('#nav-button-icon').addClass('fa-bars').removeClass('fa-close')
     )
     
+    # Activate buttons with data-href attribute
+    $('button[data-href]').click(() ->
+        window.location.href = $(this).data('href')
+    )
     
