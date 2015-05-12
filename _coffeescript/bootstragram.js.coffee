@@ -1,4 +1,12 @@
+#   ( (
+#    ) )
+#  ........
+#  |      |]
+#  \      /    BOOTSTRAGRAM
+#   `----'
+#
 # This is all the JavaScript required for the Bootstragram Web Commons project.
+# Written in CoffeeScript...
 
 jQuery ->
     #$('#bsg-debug').append("jQuery has loaded. ")

@@ -1,25 +1,15 @@
+## About
+
+This is Bootstragram's Bower package to bootstrap all our web projects.
+
 ## Installation
 
     npm install
     bower install
 
-## Style
+## Development
 
-### Navigation Bar
+To release a version:
 
-1. 4px border of dark orange
-1. The whole header (including the border should be 92px high)
-1. White background with gray text (#4C4D4F)
-
-### Slider
-
-1. Should we have a 1px border to transition?
-1. 678px high image - how does that apply to iPhone with a smaller screen?
-
-### Content
-
-...
-
-### Footer
-
-1. 508 px
+    npm version X.Y.Z
+    bower version X.Y.Z
