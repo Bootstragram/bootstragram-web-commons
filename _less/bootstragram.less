@@ -79,24 +79,36 @@ nav.navbar {
   padding: @navbar-brand-bootstragram-padding-vertical @navbar-padding-horizontal;
 }
 
-.navbar-nav > li > a {
-  font-size:      @bootstragram-navbar-bar-font-size-base;
-  font-weight:    600;
-  line-height:    @bootstragram-navbar-bar-line-height-computed;
-  padding-top:    @navbar-bootstragram-padding-vertical;
-  padding-bottom: @navbar-bootstragram-padding-vertical;
+.navbar-default {
+  .navbar-nav > li > a {
+    font-size:      @bootstragram-navbar-bar-font-size-base;
+    font-weight:    600;
+    line-height:    @bootstragram-navbar-bar-line-height-computed;
+    padding-top:    @navbar-bootstragram-padding-vertical;
+    padding-bottom: @navbar-bootstragram-padding-vertical;
   
-  //TODO replace margins by inline-block vertically centered?
-  margin-top: @navbar-bootstragram-margin-vertical;
-  margin-bottom: @navbar-bootstragram-margin-vertical;
+    //TODO replace margins by inline-block vertically centered?
+    margin-top: @navbar-bootstragram-margin-vertical;
+    margin-bottom: @navbar-bootstragram-margin-vertical;
   
-  text-transform: uppercase;
+    text-transform: uppercase;
+
+    &:hover, 
+    &:focus {
+      color: @bootstragram-accent-color-1;
+    }
+  }
 }
 
 .navbar-default .navbar-nav > .active > a {
-    .border-radius(@radius: @bootstragram-navbar-bar-active-radius);
-    color: white;
-    background-color: @bootstragram-accent-color-1;
+  .border-radius(@radius: @bootstragram-navbar-bar-active-radius);
+  color: white;
+  background-color: @bootstragram-accent-color-1;
+
+  &:hover {
+    background-color: @bootstragram-accent-color-2;
+    color: @bootstragram-accent-color-1;
+  }
 }
 
 nav.bootstragram {

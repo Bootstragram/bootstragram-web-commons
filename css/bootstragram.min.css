@@ -6568,7 +6568,7 @@ nav.navbar img {
 .navbar-brand {
   padding: 25px 15px;
 }
-.navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a {
   font-size: 10px;
   font-weight: 600;
   line-height: 14px;
@@ -6578,12 +6578,20 @@ nav.navbar img {
   margin-bottom: 33px;
   text-transform: uppercase;
 }
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #db6149;
+}
 .navbar-default .navbar-nav > .active > a {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
   color: white;
   background-color: #db6149;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: #ecb39f;
+  color: #db6149;
 }
 footer.bootstragram {
   border-top: 1px solid #b2b2b2;
