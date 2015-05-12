@@ -6702,6 +6702,9 @@ footer.bootstragram button.action span {
 footer.bootstragram button.action:hover {
   background-color: #db6149;
 }
+#main h2 {
+  text-align: center;
+}
 #jumbotron {
   background-color: #fafafa;
   padding: 0;
@@ -6719,16 +6722,22 @@ footer.bootstragram button.action:hover {
   color: white;
 }
 #jumbotron #jumbomain h1 {
-  color: white;
+  font-size: color: white;
   font-weight: bold;
-  font-size: 42px;
-  text-shadow: 1px 1px #4c4d4f;
+  font-size: 4.2857142857em;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
 }
 #jumbotron #jumbomain h2 {
   color: #db6149;
   font-weight: bold;
-  font-size: 42px;
-  text-shadow: 1px 1px #4c4d4f;
+  font-size: 4.2857142857em;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
 }
 #jumbotron #jumbomain a,
 #jumbotron #jumbomain button {
@@ -6756,15 +6765,24 @@ footer.bootstragram button.action:hover {
 #jumbotron #jumbomain img {
   max-width: 100%;
 }
+#jumbotron #jumbomain .lead {
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+#jumbotron #jumbomain .c2a {
+  margin: 1em 0;
+}
 #jumbotron #jumbostill {
   z-index: 3;
 }
-#jumbotron .jumbohead {
+#jumbotron #jumbohead {
   text-align: center;
   vertical-align: middle;
 }
 @media (min-width: 768px) {
-  #jumbotron .jumbohead {
+  #jumbotron #jumbohead {
     text-align: left;
   }
 }
@@ -6815,7 +6833,4 @@ footer.bootstragram button.action:hover {
 }
 #jumbotron .card:hover .c2a {
   color: #db6149;
-}
-#main h2 {
-  text-align: center;
 }

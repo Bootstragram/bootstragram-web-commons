@@ -1,0 +1,140 @@
+// Jumbotron
+
+.jumbotron-header (@var: 0px) {
+  font-weight: bold;
+  font-size: 4.2857142857em;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+#jumbotron {
+  background-color: darken(@bootstragram-background-color, 2%);
+  padding: 0;
+  margin: 0;
+
+  #jumbomain {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 680px;
+
+    background-position: center center;
+    background-size: cover;
+    
+    overflow: hidden;
+    
+    text-align: center;
+    color: white;
+    h1 {
+      font-size: 
+      color: white;
+      .jumbotron-header (@var: 0px);
+    }
+  
+    h2 {
+      color: @bootstragram-accent-color-1;
+      .jumbotron-header (@var: 0px);
+    }
+  
+    a, button {
+      color: inherit;
+      height: 44px;
+      background-color: transparent;
+      border: 2px solid white;
+      padding-left: 1em;
+      padding-right: 1em;
+      .border-radius (@radius: 22px); 
+      text-transform: uppercase;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;    
+      }
+    }  
+    
+    a:hover {
+      background-color: @bootstragram-accent-color-1;
+      color: white;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+    
+    .lead {
+      margin: 1em 0;
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+    
+    .c2a {
+      margin: 1em 0;
+    }
+  }
+  
+  #jumbostill {
+    z-index: 3;
+  }
+  
+  #jumbohead {
+    text-align: center;
+    @media (min-width: @screen-sm-min) { text-align: left; }
+    vertical-align: middle;
+  }
+  
+  .card {
+    border: 1px solid @bootstragram-color-light;
+    .border-radius(10px);
+    padding: 10px;
+    margin: 3.2em auto; // Centered horizontally
+
+    // In a mono-column setup, we don't want the card to take 100% of the available space
+    max-width: 66%; 
+    @media (min-width: @screen-sm-min) { max-width: none; }
+    
+    cursor: pointer;
+  
+    h1 { // Formatting of a card title
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 600;
+      text-align: center;
+      margin: 16px 0 0 0;
+      padding: 0;
+    }
+  
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: @bootstragram-accent-color-1;
+    }
+  
+    .c2a {
+      margin-top: 1.4em;
+      padding: 1.3em 0 0.7em 0;
+      border-top: thin solid lighten(@bootstragram-color-light, 20%);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: 700;  
+    
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;    
+      }
+    }
+  }
+
+  .card:hover {
+    border: 1px solid @bootstragram-accent-color-1;
+  
+    .c2a {
+      color: @bootstragram-accent-color-1;
+    }
+  }
+}
