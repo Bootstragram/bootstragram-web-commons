@@ -11,5 +11,5 @@ This is Bootstragram's Bower package to bootstrap all our web projects.
 
 To release a version:
 
-1. Bump the version number in `bower.json`
-1. Bump the version number in `package.json`
+    npm version X.Y.Z
+    bower version X.Y.Z
