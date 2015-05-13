@@ -30,10 +30,10 @@
         return window.location.href = $(this).data('href');
       });
     };
-    if ($('#jumbomain') != null) {
+    if ($('#jumbotron').length) {
       initJumbotron();
     }
-    if ($('#bootstragram-menu-collapse') != null) {
+    if ($('#bootstragram-menu-collapse').length) {
       initNavbar();
     }
     return initButtons();

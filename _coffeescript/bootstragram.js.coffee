@@ -43,7 +43,7 @@ jQuery ->
             window.location.href = $(this).data('href')
         )
         
-    initJumbotron() if $('#jumbomain')?
-    initNavbar()    if $('#bootstragram-menu-collapse')?
+    initJumbotron() if $('#jumbotron').length
+    initNavbar()    if $('#bootstragram-menu-collapse').length
     initButtons()
     
