@@ -47,9 +47,7 @@ nav.navbar {
     font-size:      @bootstragram-navbar-bar-font-size-base-ZOOM;
     line-height:    @bootstragram-navbar-bar-line-height-computed-ZOOM;
     text-align: center;
-    //padding-top: 0.2em;
-    //padding-bottom: 0.2em;
-    
+
     // Not-collapsed (eg SMALLER)
     @media (min-width: @grid-float-breakpoint) {
       padding-top:    @navbar-bootstragram-padding-vertical;
@@ -57,14 +55,19 @@ nav.navbar {
       font-size:      @bootstragram-navbar-bar-font-size-base;
       line-height:    @bootstragram-navbar-bar-line-height-computed;
       text-align: left;
-      //TODO replace margins by inline-block vertically centered?
+
       margin-top: @navbar-bootstragram-margin-vertical;
-      margin-bottom: @navbar-bootstragram-margin-vertical;
+      margin-bottom: @navbar-bootstragram-margin-vertical;    
     }
   }
-  
+    
   .navbar-toggle {
     border: none;
+    @media (max-width: @grid-float-breakpoint) {
+      display: inline-block;
+      vertical-align: middle;
+      .navbar-vertical-align(38px);
+    }
   }
 }
 

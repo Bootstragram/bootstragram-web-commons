@@ -6588,6 +6588,14 @@ nav.navbar img {
 .navbar-default .navbar-toggle {
   border: none;
 }
+@media (max-width: 768px) {
+  .navbar-default .navbar-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 27px;
+    margin-bottom: 27px;
+  }
+}
 .navbar-default .navbar-nav > .active > a {
   color: white;
   background-color: #db6149;
