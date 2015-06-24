@@ -6826,7 +6826,6 @@ footer.bootstragram .footer-text .footer-icons-links button {
   -moz-border-radius: 18px;
   border-radius: 18px;
   border: 1px solid #b2b2b2;
-  background-color: transparent;
   margin-right: 11px;
   width: 36px;
   height: 36px;
@@ -6835,6 +6834,10 @@ footer.bootstragram .footer-text .footer-icons-links button span {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+}
+footer.bootstragram .footer-text .footer-icons-links button.positive {
+  background-color: transparent;
+  color: #4c4d4f;
 }
 footer.bootstragram .footer-text .footer-icons-links button.negative {
   background-color: #4c4d4f;
@@ -6845,7 +6848,7 @@ footer.bootstragram .footer-text .footer-icons-links button:hover {
   background-color: #db6149;
   color: #ffffff;
 }
-footer.bootstragram .footer-text .footer-icons-links a {
+footer.bootstragram .footer-text .footer-icons-links a.big {
   margin-left: 11px;
   margin-right: 11px;
   color: #4c4d4f;

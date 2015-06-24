@@ -53,7 +53,6 @@ footer.bootstragram {
         padding: 0;
         .border-radius(@radius: 18px);
         border: 1px solid @bootstragram-color-light;
-        background-color: transparent;
         margin-right: 11px;
         width: 36px;
         height: 36px;
@@ -63,6 +62,11 @@ footer.bootstragram {
           vertical-align: middle;
           text-align: center;
         }
+      }
+      
+      button.positive {
+        background-color: transparent;
+        color: @bootstragram-color;
       }
       
       button.negative {
@@ -76,7 +80,7 @@ footer.bootstragram {
         color: @bootstragram-background-color;
       }
       
-      a {
+      a.big {
         margin-left: 11px;
         margin-right: 11px;
         color: @bootstragram-color;
