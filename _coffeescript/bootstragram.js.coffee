@@ -24,7 +24,7 @@ jQuery ->
 
         # Cut the jumbomain at the fold and center the jumbohead
         visibleHeightOfJumbotron = $(window).height() - $('#jumbotron').offset().top
-        jumboHeight = Math.max(visibleHeightOfJumbotron, jumboMinHeight)
+        jumboHeight = if ($(window).width() > jumboCollapsingMinWidth) then Math.max(visibleHeightOfJumbotron, jumboMinHeight) else jumboMinHeight
         jumboHeadHeight = $('#jumbohead').height()
         jumboImageHeight = $('#jumbo-image').height()
         

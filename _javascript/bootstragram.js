@@ -10,7 +10,7 @@
       jumboMinHeight = 680;
       $('#jumbomain').css('background-image', 'url(' + $('#jumbomain').data('background-url') + ')');
       visibleHeightOfJumbotron = $(window).height() - $('#jumbotron').offset().top;
-      jumboHeight = Math.max(visibleHeightOfJumbotron, jumboMinHeight);
+      jumboHeight = $(window).width() > jumboCollapsingMinWidth ? Math.max(visibleHeightOfJumbotron, jumboMinHeight) : jumboMinHeight;
       jumboHeadHeight = $('#jumbohead').height();
       jumboImageHeight = $('#jumbo-image').height();
       if (jumboHeadHeight < jumboHeight) {
