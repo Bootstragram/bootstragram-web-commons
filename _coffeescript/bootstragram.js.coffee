@@ -11,7 +11,11 @@
 #
 
 jQuery ->
-    resizeJumbotron = () ->
+    # Init plugin shit
+    $.bootstragram = $.bootstragram || {}
+    $.bootstragram.webcommons = $.bootstragram.webcomons || {} 
+
+    $.bootstragram.webcommons.resizeJumbotron = () ->
         if $('#jumbotron').length == 0
             return
             
@@ -44,7 +48,7 @@ jQuery ->
         else
             console.error "ERROR: jumbotron's title div is bigger than the jumbotron itself"
 
-    initNavbar = () ->
+    $.bootstragram.webcommons.initNavbar = () ->
         if $('#bootstragram-menu-collapse').length == 0
             return
 
@@ -55,15 +59,15 @@ jQuery ->
             $('#nav-button-icon').addClass('fa-bars').removeClass('fa-close')
         )
     
-    initButtons = () ->
+    $.bootstragram.webcommons.initButtons = () ->
         # Activate buttons with data-href attribute
         $('button[data-href]').click(() ->
             window.location.href = $(this).data('href')
         )
         
-    resizeJumbotron()
-    initNavbar() 
-    initButtons()
+    $.bootstragram.webcommons.resizeJumbotron()
+    $.bootstragram.webcommons.initNavbar() 
+    $.bootstragram.webcommons.initButtons()
     
     $(window).resize () ->
-        resizeJumbotron()
+        $.bootstragram.webcommons.resizeJumbotron()
