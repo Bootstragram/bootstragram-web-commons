@@ -6616,6 +6616,12 @@ nav.navbar img {
   padding: 0;
   margin: 0;
 }
+#jumbotron a {
+  color: inherit;
+}
+#jumbotron a:hover {
+  text-decoration: none;
+}
 #jumbotron #jumbomain {
   padding: 0;
   margin: 0;
