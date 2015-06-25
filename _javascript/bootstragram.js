@@ -3,7 +3,7 @@
     var initButtons, initNavbar, resizeJumbotron;
     resizeJumbotron = function() {
       var jumboCollapsingMinWidth, jumboHeadHeight, jumboHeight, jumboImageHeight, jumboMinHeight, visibleHeightOfJumbotron;
-      if ('#jumbotron'.length === 0) {
+      if ($('#jumbotron').length === 0) {
         return;
       }
       jumboCollapsingMinWidth = 768;

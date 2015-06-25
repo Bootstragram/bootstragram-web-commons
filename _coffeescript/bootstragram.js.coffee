@@ -12,7 +12,7 @@
 
 jQuery ->
     resizeJumbotron = () ->
-        if ('#jumbotron').length == 0
+        if $('#jumbotron').length == 0
             return
             
         # Variables
