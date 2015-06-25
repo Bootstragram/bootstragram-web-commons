@@ -1,7 +1,8 @@
 (function() {
   jQuery(function() {
-    var initButtons, initNavbar, resizeJumbotron;
-    resizeJumbotron = function() {
+    $.bootstragram = $.bootstragram || {};
+    $.bootstragram.webcommons = $.bootstragram.webcomons || {};
+    $.bootstragram.webcommons.resizeJumbotron = function() {
       var jumboCollapsingMinWidth, jumboHeadHeight, jumboHeight, jumboImageHeight, jumboMinHeight, visibleHeightOfJumbotron;
       if ($('#jumbotron').length === 0) {
         return;
@@ -30,7 +31,7 @@
         return console.error("ERROR: jumbotron's title div is bigger than the jumbotron itself");
       }
     };
-    initNavbar = function() {
+    $.bootstragram.webcommons.initNavbar = function() {
       if ($('#bootstragram-menu-collapse').length === 0) {
         return;
       }
@@ -40,16 +41,16 @@
         return $('#nav-button-icon').addClass('fa-bars').removeClass('fa-close');
       });
     };
-    initButtons = function() {
+    $.bootstragram.webcommons.initButtons = function() {
       return $('button[data-href]').click(function() {
         return window.location.href = $(this).data('href');
       });
     };
-    resizeJumbotron();
-    initNavbar();
-    initButtons();
+    $.bootstragram.webcommons.resizeJumbotron();
+    $.bootstragram.webcommons.initNavbar();
+    $.bootstragram.webcommons.initButtons();
     return $(window).resize(function() {
-      return resizeJumbotron();
+      return $.bootstragram.webcommons.resizeJumbotron();
     });
   });
 
