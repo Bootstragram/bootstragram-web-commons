@@ -46,7 +46,9 @@
         return window.location.href = $(this).data('href');
       });
     };
-    $.bootstragram.webcommons.resizeJumbotron();
+    $(window).load(function() {
+      return $.bootstragram.webcommons.resizeJumbotron();
+    });
     $.bootstragram.webcommons.initNavbar();
     $.bootstragram.webcommons.initButtons();
     return $(window).resize(function() {
