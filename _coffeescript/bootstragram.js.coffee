@@ -64,8 +64,13 @@ jQuery ->
         $('button[data-href]').click(() ->
             window.location.href = $(this).data('href')
         )
-        
-    $.bootstragram.webcommons.resizeJumbotron()
+
+    # Call resizeJumbotron only when iamges are loaded
+    # cf. http://stackoverflow.com/questions/544993/official-way-to-ask-jquery-wait-for-all-images-to-load-before-executing-somethin
+    # cf. issue #13        
+    $(window).load () ->
+        $.bootstragram.webcommons.resizeJumbotron()
+
     $.bootstragram.webcommons.initNavbar() 
     $.bootstragram.webcommons.initButtons()
     
