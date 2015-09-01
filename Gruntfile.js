@@ -15,7 +15,8 @@ grunt.initConfig({
   uglify: {
     bootstragram: {
       files: {
-        'js/bootstragram.min.js': '_javascript/bootstragram.js'
+        'js/bootstragram.min.js': '_javascript/bootstragram.js',
+        'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js'
       }
     }
   },
@@ -30,7 +31,8 @@ grunt.initConfig({
   coffee: {
     compile: {
       files: {
-        '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee'
+        '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee',
+        '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee'
       }
     }
   }

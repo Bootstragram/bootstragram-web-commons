@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blender Canvas - Bootstragram Web Commons</title>
+    <meta name="description" content="A demo for Bootstragram's Blender Canvas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstragram.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blender Canvas Demo</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Image 1</h2>
+                <div>
+                    <img class="img-responsive" src="assets/conte-tour-nb.png" alt="The 1st image to blend">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Image 2</h2>
+                <div>
+                    <img class="img-responsive" src="assets/conte-tour-couleur.png" alt="The 2nd image to blend">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Blended Canvas</h2>
+                <div>
+                    <input type="range" name="alpha" min="0" max="100">
+                </div>
+                <canvas id="blendedCanvas">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="_javascript/bsg-blender-canvas.js"></script>
+    <script>
+    $(function() {
+        var canvas = document.getElementById("blendedCanvas");
+        canvas.width = $('.img-responsive').width();
+        canvas.height = $('.img-responsive').height();
+        
+        var canvasBlender = new $.bootstragram.canvasBlender('blendedCanvas', 'assets/conte-tour-nb.png', 'assets/conte-tour-couleur.png', { verbose: true });
+        canvasBlender.loadImages(function() {
+            $('input[name=alpha]').on('input', function() {
+                canvasBlender.draw($(this).val() / 100.0);
+            });
+            canvasBlender.draw(0.5);
+        });
+    });
+    </script>
+</body>
+</html>
