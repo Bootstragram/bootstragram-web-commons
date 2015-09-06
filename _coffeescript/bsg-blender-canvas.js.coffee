@@ -12,7 +12,7 @@ jQuery ->
         this.verbose = options.verbose || false
 
         # Computed stuff
-        this.plainImage = "caca"
+        this.plainImage = null
         this.multipliedImage = null
         this.canvas = document.getElementById(canvasID)
         this.context = this.canvas.getContext("2d")

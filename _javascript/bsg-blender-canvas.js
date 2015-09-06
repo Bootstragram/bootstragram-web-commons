@@ -10,7 +10,7 @@
       this.multipliedImageURL = multipliedImageURL;
       this.blendMode = options.blendMode || "multiply";
       this.verbose = options.verbose || false;
-      this.plainImage = "caca";
+      this.plainImage = null;
       this.multipliedImage = null;
       this.canvas = document.getElementById(canvasID);
       this.context = this.canvas.getContext("2d");
