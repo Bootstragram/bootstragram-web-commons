@@ -6887,3 +6887,50 @@ footer.bootstragram button.action span {
 footer.bootstragram button.action:hover {
   background-color: #db6149;
 }
+.bsg-c2a-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 1em;
+  height: 3.143em;
+  line-height: 1em;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 1.5715em;
+  text-align: center;
+  white-space: nowrap;
+}
+.bsg-c2a-button span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+}
+.bsg-c2a-button img {
+  max-height: 100%;
+}
+/* The ghost, nudged to maintain perfect centering */
+.bsg-c2a-button:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.bsg-c2a-button:visited {
+  text-decoration: none;
+  color: white;
+}
+.bsg-c2a-button:hover {
+  background-color: #db6149;
+  text-decoration: none;
+  color: white;
+}
+.bsg-c2a-button:active {
+  -webkit-box-shadow: inset 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: white;
+}

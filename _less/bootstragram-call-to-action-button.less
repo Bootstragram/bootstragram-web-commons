@@ -1,0 +1,62 @@
+@bsg-c2a-button-line-height: 1.4em;
+@bsg-c2a-button-vertical-padding: .5em;
+@bsg-c2a-button-horizontal-padding: 1em;
+@bsg-c2a-height: 3.143em;
+@bsg-c2a-button-radius: @bsg-c2a-height / 2;
+
+.bsg-c2a-button {
+    display: inline-block;
+    padding: @bsg-c2a-button-vertical-padding 1em;
+    margin: 1em;
+    height: 3.143em;
+    line-height: 1em;
+
+    background-color: transparent;
+    color: white;
+
+    text-transform: uppercase;
+
+    border: 2px solid white;
+    border-radius: @bsg-c2a-button-radius;
+    
+    text-align: center;
+    white-space: nowrap;
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+
+        padding: 0;
+        margin: 0;
+    }
+    
+    img {
+        max-height: 100%;
+    }
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.bsg-c2a-button:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.bsg-c2a-button:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.bsg-c2a-button:hover {
+    background-color: @bootstragram-accent-color-1;
+    text-decoration: none;
+    color: white;
+}
+
+.bsg-c2a-button:active {
+    .box-shadow(inset 0 10px 25px rgba(0,0,0,.25));
+    text-decoration: none;
+    color: white;
+}
