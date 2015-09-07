@@ -26,6 +26,24 @@ grunt.initConfig({
         {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.min.css'], dest: 'assets/css/'},
         {expand: true, cwd: 'bower_components/components-font-awesome/fonts/', src: ['*'], dest: 'assets/fonts/'}
       ]
+    },
+    waitForImages: {
+      files: [
+        {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: '_javascript/'},
+        {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'js/'}
+      ]
+    },
+    jQuery: {
+      files: [
+        {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: '_javascript/'},
+        {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'js/'}
+      ]      
+    },
+    bootstrap: {
+      files: [
+        {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: '_javascript/'},
+        {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'js/'}
+      ]      
     }
   },
   coffee: {
