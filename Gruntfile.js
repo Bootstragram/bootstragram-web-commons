@@ -15,8 +15,10 @@ grunt.initConfig({
   uglify: {
     bootstragram: {
       files: {
+        'js/bsg-umd-root.min.js': '_javascript/bsg-umd-root.js',
         'js/bootstragram.min.js': '_javascript/bootstragram.js',
-        'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js'
+        'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
+        'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
       }
     }
   },
@@ -50,7 +52,8 @@ grunt.initConfig({
     compile: {
       files: {
         '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee',
-        '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee'
+        '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee',
+        '_javascript/bsg-animal.js': '_coffeescript/bsg-animal.js.coffee'
       }
     }
   }
