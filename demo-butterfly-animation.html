@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<style>
+.butterfly {
+  border: thin solid blue;
+  width: 61px;
+  height: 76px;
+  background-image: url('assets/butterfly-sprite.png');
+  background-position: top left;
+  animation: wing-flapping .8s infinite steps(2);
+}
+
+.flying {
+  border: thin solid red;
+  padding: 1em;
+  animation: flying 10s infinite;
+}
+
+@keyframes wing-flapping {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: 0px -152px;
+  }
+}
+
+@keyframes flying {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(200px, 50px);
+  }
+}
+
+</style>
+
+<divclass="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Butterfly animation</h1>
+      <div style="width: 100%; background-color: #eee; height: 400px;">
+        <div class="flying">
+          <div class="butterfly"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function() {
+});
+</script>
