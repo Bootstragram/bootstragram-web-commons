@@ -6587,13 +6587,14 @@ nav.navbar img {
 }
 .navbar-default .navbar-toggle {
   border: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .navbar-default .navbar-toggle {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 27px;
-    margin-bottom: 27px;
+    display: none;
   }
 }
 .navbar-default .navbar-nav > .active > a {
