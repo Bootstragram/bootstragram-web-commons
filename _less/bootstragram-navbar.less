@@ -63,10 +63,14 @@ nav.navbar {
     
   .navbar-toggle {
     border: none;
-    @media (max-width: @grid-float-breakpoint) {
-      display: inline-block;
-      vertical-align: middle;
-      .navbar-vertical-align(38px);
+
+    // Collapsed only
+    display: inline-block;
+    vertical-align: middle;
+    .navbar-vertical-align(38px);
+
+    @media (min-width: @grid-float-breakpoint) {
+      display: none;
     }
   }
 }
