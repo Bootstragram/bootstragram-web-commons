@@ -1,12 +1,14 @@
 {
   "name": "bootstragram-web-commons",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "dependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-coffee": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-sassdoc": "*",
     "bower": "*",
     "grunt-exec": "*"
   },

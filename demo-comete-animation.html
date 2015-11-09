@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<style>
+.comet {
+  border: thin solid blue;
+  width: 144px;
+  height: 135px;
+  background-image: url('assets/comet.png');
+  background-position: top left;
+  animation: comet 5s linear infinite;
+}
+
+@keyframes comet {
+  0% {
+    -webkit-transform: translate(0px,135px);
+  }
+
+  100% {
+    -webkit-transform: translate(84px,82px);
+  }
+}
+
+</style>
+
+<divclass="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Comet animation</h1>
+      <div style="width: 100%; background-color: #eee; height: 400px;">
+        <div class="comet"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function() {
+});
+</script>

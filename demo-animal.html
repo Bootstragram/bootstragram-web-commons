@@ -1,0 +1,17 @@
+<html>
+<body>
+  <h1>Animal CoffeeScript Demo</h1>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bsg-umd-root.min.js"></script>
+  <script src="js/bsg-animal.min.js"></script>
+  <script>
+  $(function() {
+    console.log(Bootstragram);
+    sam = new Bootstragram.Snake("Sammy the Python");
+    tom = new Bootstragram.Horse("Tommy the Palomino");
+    sam.move();
+    tom.move();     
+  });
+  </script>
+</body>
+</html>

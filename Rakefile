@@ -5,4 +5,10 @@ namespace :bootstragram do
     # The values should be adjusted from 25,55 to whatever feels good!
     `convert #{args[:source_image]} -colorspace gray +level 15%,40% #{destination_image}`
   end
+  
+  desc "Create a C2A demo page"
+  task :c2a_compile do |t|
+    liquid_template = File.open("_liquid/call-to-action/call-to-action-template.html").read
+    puts liquid_template
+  end
 end
