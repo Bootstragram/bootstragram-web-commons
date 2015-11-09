@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     less: {
       production: {
         options: {
@@ -12,16 +13,21 @@ module.exports = function(grunt) {
         }
       }
     },
-    // uglify: {
-    //   bootstragram: {
-    //     files: {
-    //       'js/bsg-umd-root.min.js': '_javascript/bsg-umd-root.js',
-    //       'js/bootstragram.min.js': '_javascript/bootstragram.js',
-    //       'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
-    //       'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
-    //     }
-    //   }
-    // },
+    uglify: {
+      options: {
+            banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+              '<%= grunt.template.today("yyyy-mm-dd") %> */'
+          },
+      bootstragram: {
+        files: [{
+          expand: true,
+          cwd: 'dist/assets/js',
+          src: '**/*.js',
+          dest: 'dist/assets/js',
+          ext: '.min.js'
+        }]
+      }
+    },
     copy: {
       fontawesome: {
         files: [
