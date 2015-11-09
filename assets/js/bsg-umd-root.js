@@ -2,7 +2,6 @@
 // Commit : 6e693154138b111e17b264e4e27f76e6116f1aba
 
 (function (root, factory) {
-  console.debug('Initializing stuff');
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
@@ -13,7 +12,6 @@
     module.exports = factory();
   } else {
     // Browser globals (root is window)
-    console.debug('Browser shit');
     root.Bootstragram = factory();
   }
 }(this, function () {

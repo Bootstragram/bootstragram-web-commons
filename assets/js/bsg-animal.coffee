@@ -1,3 +1,7 @@
+---
+# This is the Coffeescript sample code for class inheritance. Here for debug/test purposes
+---
+
 jQuery ->
   
   class Bootstragram.Animal

@@ -1,3 +1,7 @@
+---
+# Blender object
+---
+
 jQuery ->
     $.bootstragram = $.bootstragram || {}
 

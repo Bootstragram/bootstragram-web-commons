@@ -12,16 +12,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    uglify: {
-      bootstragram: {
-        files: {
-          'js/bsg-umd-root.min.js': '_javascript/bsg-umd-root.js',
-          'js/bootstragram.min.js': '_javascript/bootstragram.js',
-          'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
-          'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
-        }
-      }
-    },
+    // uglify: {
+    //   bootstragram: {
+    //     files: {
+    //       'js/bsg-umd-root.min.js': '_javascript/bsg-umd-root.js',
+    //       'js/bootstragram.min.js': '_javascript/bootstragram.js',
+    //       'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
+    //       'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
+    //     }
+    //   }
+    // },
     copy: {
       fontawesome: {
         files: [
@@ -46,15 +46,6 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: '_javascript/'},
           {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'js/'}
         ]      
-      }
-    },
-    coffee: {
-      compile: {
-        files: {
-          '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee',
-          '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee',
-          '_javascript/bsg-animal.js': '_coffeescript/bsg-animal.js.coffee'
-        }
       }
     },
   
