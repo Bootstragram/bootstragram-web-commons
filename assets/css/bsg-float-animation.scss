@@ -1,0 +1,64 @@
+---
+---
+
+/// Float animation sources.
+/// cf. demo-butterfly-float.html for details.
+
+/// How could this be improved?
+/// 
+/// 1. Make the speed constant by the random values indicating a direction rather than a final position
+/// 2. Use Bevier curves to define the transformation
+
+
+/// How much you want the float animation to move horizontally (in %) 
+$float-horizontal-intensity: .04;
+
+/// How much you want the float animation to move vertically (in %)
+$float-vertical-intensity: .20;
+
+/// float animation, defined randomely at each call of the processor
+@keyframes bsg-animation__float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  20% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  30% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  40% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  50% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  60% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  70% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  80% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  90% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+
+  100% {
+    transform: translate(percentage(random() * $float-horizontal-intensity - $float-horizontal-intensity / 2), percentage(random() * $float-vertical-intensity - $float-vertical-intensity / 2));
+  }
+}

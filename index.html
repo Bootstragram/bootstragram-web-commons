@@ -13,7 +13,7 @@ layout: default
                     </span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img alt="Brand" src="assets/logo-pixels-1.png">
+                    <img alt="Brand" src="{{ 'assets/images/logo-pixels-1.png' | prepend: site.baseurl }}">
                 </a>
             </div><!-- navbar header including brand and mobile menu -->
             <div id="bootstragram-menu-collapse" class="collapse navbar-collapse">
@@ -31,7 +31,7 @@ layout: default
   
     <!-- JUMBOTRON -->
     <div id="jumbotron">
-        <div id="jumbomain" data-background-url="/assets/myRGBimage.jpg">
+        <div id="jumbomain" data-background-url="{{ 'assets/images/myRGBimage.jpg' | prepend: site.baseurl }}">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7 col-sm-push-5">
@@ -58,7 +58,7 @@ layout: default
                     </div>
                     <div class="col-sm-5 col-sm-pull-7">
                         <div id="jumbo-image">
-                            <img src="/assets/phone-template.png">
+                            <img src="{{ 'assets/images/phone-template.png' | prepend: site.baseurl }}">
                         </div>
                     </div>
                 </div><!-- row -->
@@ -135,7 +135,7 @@ layout: default
             <div class="row">
                 <div class="col-sm-4">
                     <div class="bootstragram-logo">
-                        <img src="assets/logo-b-bootstragram-60@2x.png" alt="Bootstragram Logo">
+                        <img src="{{ 'assets/images/logo-b-bootstragram-60@2x.png' | prepend: site.baseurl }}" alt="Bootstragram Logo">
                         <span class="footer-text">
                             <span class="footer-text-title">Get in touch with us.</span>
                         </span>
@@ -185,9 +185,8 @@ layout: default
         </div><!-- container -->
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="{{ 'vendor/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ 'vendor/assets/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
     <!-- <script src="js/plugins.js"></script> -->
     <!-- <script src="js/main.js"></script> -->
-    <script src="_javascript/bootstragram.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ 'assets/js/bootstragram.js' | prepend: site.baseurl }}"></script>

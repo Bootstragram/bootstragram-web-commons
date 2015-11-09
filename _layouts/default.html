@@ -1,22 +1,22 @@
 <!doctype html>
 <html class="no-js" lang="">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstragram Web Commons</title>
-    <meta name="description" content="A demo for Bootstragram Web Commons">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstragram Web Commons</title>
+  <meta name="description" content="A demo for Bootstragram Web Commons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstragram.min.css">
-    <link rel="stylesheet" href="css/bsg-float-animation.css">
+  <link rel="stylesheet" href="{{ 'vendor/assets/css/font-awesome.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ 'assets/css/bootstragram.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ 'assets/css/bsg-float-animation.css' | prepend: site.baseurl }}">
 </head>
 <body>
     
-    {{ content }}
+  {{ content }}
   
 </body>
 </html>

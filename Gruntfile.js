@@ -2,17 +2,6 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    less: {
-      production: {
-        options: {
-          paths: ["bower_components/bootstrap/less", "bower_components/components-font-awesome/less"],
-          yuicompress: true
-        },
-        files: {
-          "css/bootstragram.min.css": "_less/bootstragram.less"
-        }
-      }
-    },
     uglify: {
       options: {
             banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -31,40 +20,32 @@ module.exports = function(grunt) {
     copy: {
       fontawesome: {
         files: [
-          {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.min.css'], dest: 'assets/css/'},
-          {expand: true, cwd: 'bower_components/components-font-awesome/fonts/', src: ['*'], dest: 'assets/fonts/'}
+          {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.css'], dest: 'vendor/assets/css/'},
+          {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.min.css'], dest: 'vendor/assets/css/'},
+          {expand: true, cwd: 'bower_components/components-font-awesome/fonts/', src: ['*'], dest: 'vendor/assets/fonts/'}
         ]
       },
       waitForImages: {
         files: [
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: 'vendors/assets/js/'},
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'vendors/assets/js/'}
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: 'vendor/assets/js/'},
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'vendor/assets/js/'}
         ]
       },
       jQuery: {
         files: [
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: 'vendors/assets/js/'},
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'vendors/assets/js/'}
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: 'vendor/assets/js/'},
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'vendor/assets/js/'}
         ]      
       },
       bootstrap: {
         files: [
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: 'vendors/assets/js/'},
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'vendors/assets/js/'}
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: 'vendor/assets/js/'},
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'vendor/assets/js/'},
+          {expand: true, cwd: 'bower_components/bootstrap/scss/', src: ['**/*'], dest: '_sass/'},
         ]      
       }
     },
   
-    sass: {                              // Task
-      dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded'
-        },
-        files: {                         // Dictionary of files
-          'css/bsg-float-animation.css': '_sass/bsg-float-animation.scss'
-        }
-      }
-    },
     sassdoc: {
       default: {
         src: '_sass',
@@ -81,8 +62,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sassdoc');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('javascript', [ 'coffee', 'uglify' ])
-  grunt.registerTask('default', [ 'less', 'coffee', 'uglify', 'copy' ]);
-  grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
-
+  grunt.registerTask('pre', [ 'copy' ])
+  grunt.registerTask('post', [ 'uglify' ]);
+  //grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
 };

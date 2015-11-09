@@ -10,7 +10,7 @@
     "bootstragram"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.1",
+    "bootstrap": "git@github.com:twbs/bootstrap.git#v4.0.0-alpha",
     "components-font-awesome": ">=4.0",
     "waitForImages": "*"
   },
