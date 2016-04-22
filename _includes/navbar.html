@@ -1,0 +1,29 @@
+<nav class="bsg-navbar">
+  <a class="bsg-navbar--brand" href="{{ '/' | prepend: site.baseurl }}">
+    <img alt="Bootstragram" src="{{ 'assets/images/logo-pixels-1.png' | prepend: site.baseurl }}">
+  </a>
+  
+  <ul class="bsg-navbar--nav-links">
+    <li><a href="#">Menu 1</a></li>
+    <li class="active"><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li><a href="#">Menu 4</a></li>
+    <li><a href="#">Menu 5</a></li>
+    <li><a href="#">Menu 6</a></li>
+  </ul>
+
+  <!--<div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bsg-menu-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span>
+          <i class="fa fa-bars fa-lg" id="nav-button-icon"></i>
+        </span>
+      </button>
+    </div><!-- navbar header -->
+    <div class="collapse navbar-collapse" id="bsg-menu-collapse">
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+    <!-- </div> -->
+</nav>
