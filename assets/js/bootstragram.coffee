@@ -1,5 +1,4 @@
 ---
-# 
 ---
 
 #
@@ -17,12 +16,12 @@
 jQuery ->
     # Init plugin shit
     $.bootstragram = $.bootstragram || {}
-    $.bootstragram.webcommons = $.bootstragram.webcomons || {} 
+    $.bootstragram.webcommons = $.bootstragram.webcomons || {}
 
     $.bootstragram.webcommons.resizeJumbotron = () ->
         if $('#jumbotron').length == 0
             return
-            
+
         # Variables
         jumboCollapsingMinWidth = 768
         jumboMinHeight = 680
@@ -35,7 +34,7 @@ jQuery ->
         jumboHeight = if ($(window).width() > jumboCollapsingMinWidth) then Math.max(visibleHeightOfJumbotron, jumboMinHeight) else jumboMinHeight
         jumboHeadHeight = $('#jumbohead').height()
         jumboImageHeight = $('#jumbo-image').height()
-        
+
         if jumboHeadHeight < jumboHeight
             $('#jumbomain').css('height', jumboHeight + 'px')
             if $(window).width() > jumboCollapsingMinWidth
@@ -62,7 +61,7 @@ jQuery ->
         ).on('hide.bs.collapse', () ->
             $('#nav-button-icon').addClass('fa-bars').removeClass('fa-close')
         )
-    
+
     $.bootstragram.webcommons.initButtons = () ->
         # Activate buttons with data-href attribute
         $('button[data-href]').click(() ->
@@ -71,12 +70,12 @@ jQuery ->
 
     # Call resizeJumbotron only when iamges are loaded
     # cf. http://stackoverflow.com/questions/544993/official-way-to-ask-jquery-wait-for-all-images-to-load-before-executing-somethin
-    # cf. issue #13        
+    # cf. issue #13
     $(window).load () ->
         $.bootstragram.webcommons.resizeJumbotron()
 
-    $.bootstragram.webcommons.initNavbar() 
+    $.bootstragram.webcommons.initNavbar()
     $.bootstragram.webcommons.initButtons()
-    
+
     $(window).resize () ->
         $.bootstragram.webcommons.resizeJumbotron()
