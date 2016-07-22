@@ -6,3 +6,4 @@ gem "jekyll"
 gem "bundler"
 gem "kramdown"
 gem "jekyll-sitemap"
+gem "jekyll-coffeescript" # Required to enable Coffeescript in Jekyll 3.0

@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://webcommons.bootstragram.com" # the base hostname & protocol for your site
 twitter_username: bootstragram
 facebook_pagename: bootstragram
-destination: dist
+destination: ~/Developer/build/bootstragram-web-commons-gh-pages
 github_url: "https://github.com/Bootstragram"
 
 # Build settings
@@ -17,3 +17,4 @@ exclude: [ 'bower_components', 'node_modules' ]
 
 gems:
   - jekyll-sitemap
+  - jekyll-coffeescript

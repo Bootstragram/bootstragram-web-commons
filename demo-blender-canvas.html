@@ -40,28 +40,28 @@
         </div>
     </div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="_javascript/bsg-blender-canvas.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bsg-blender-canvas.min.js"></script>
     <script>
     $(function() {
-        var canvas = document.getElementById("blendedCanvas");        
+        var canvas = document.getElementById("blendedCanvas");
         var canvasBlender = new $.bootstragram.canvasBlender('blendedCanvas', 'http://unsplash.it/800/450?image=642', 'http://unsplash.it/800/450?image=321', { verbose: true });
-        
+
         var redrawCanvas = function() {
-            canvasBlender.draw($('input[name=alpha]').val() / 100.0);            
+            canvasBlender.draw($('input[name=alpha]').val() / 100.0);
         }
-        
+
         var resizeCanvas = function() {
             canvas.width = $('.img-responsive').width();
-            canvas.height = $('.img-responsive').height();                        
+            canvas.height = $('.img-responsive').height();
         }
-        
+
         $(window).resize(function() {
             resizeCanvas();
             redrawCanvas();
         });
-        
+
         canvasBlender.loadImages(function() {
             resizeCanvas();
             $('input[name=alpha]').on('input', function() {
