@@ -5,3 +5,6 @@ dist
 # Sass Shit
 .sass-cache
 sassdoc
+
+# JSDoc
+out
