@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     uglify: {
       bootstragram: {
         files: {
-          'js/bsg-umd-root.min.js': '_javascript/bsg-umd-root.js',
+          'js/min/bsg-umd-root.min.js': 'js/bsg-umd-root.js',
+          'js/min/bsg-social-share.min.js': 'js/bsg-social-share.js',
           'js/bootstragram.min.js': '_javascript/bootstragram.js',
           'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
           'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
@@ -39,13 +40,13 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: '_javascript/'},
           {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'js/'}
-        ]      
+        ]
       },
       bootstrap: {
         files: [
           {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: '_javascript/'},
           {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'js/'}
-        ]      
+        ]
       }
     },
     coffee: {
@@ -57,7 +58,7 @@ module.exports = function(grunt) {
         }
       }
     },
-  
+
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
@@ -73,7 +74,7 @@ module.exports = function(grunt) {
         src: '_sass',
       },
     }
-    
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');

@@ -15,4 +15,12 @@ namespace :bootstragram do
     liquid_template = File.open("_liquid/call-to-action/call-to-action-template.html").read
     puts liquid_template
   end
+
+  desc "Create directories"
+  task :create_dir do
+    sh "mkdir -p ~/Developer/build/bootstragram-web-commons-gh-pages"
+    sh "mkdir -p ~/Developer/build/bootstragram-web-commons-pow"
+    sh "ln -Ffvs ~/Developer/build/bootstragram-web-commons-gh-pages ~/Developer/build/bootstragram-web-commons-pow/public"
+    sh "cd ~/.pow && ln -s ~/Developer/build/bootstragram-web-commons-pow bootstragram-web-commons"
+  end
 end
