@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstragram Web Commons</title>
+    <meta name="description" content="A demo for Bootstragram Web Commons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstragram.min.css">
+    <link rel="stylesheet" href="css/bsg-float-animation.css">
+</head>
+<body>
+    
+    <h1 id="social-sharing-demo">Social Sharing Demo</h1>
+
+<p><code class="highlighter-rouge">bsg-social-share.js</code> requires <code class="highlighter-rouge">bsg-umd-root.min.js</code> and <code class="highlighter-rouge">jquery</code>.</p>
+
+<h2 id="facebook">Facebook</h2>
+
+<p><button class="btn btn-default" id="share-facebook" data-link="http://bootstragram-web-commons.dev/demo-social-sharing.html">
+  Share on Facebook
+</button></p>
+
+<h2 id="twitter">Twitter</h2>
+
+<p>The markup for Twitter requires a <code class="highlighter-rouge">a</code> element.</p>
+
+<p><a class="btn btn-default" id="share-twitter" href="https://twitter.com/intent/tweet?url=https://bootstragram.com&amp;text=Coucou&amp;via=Bootstragram">
+  Share on Twitter
+</a></p>
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/bsg-umd-root.js"></script>
+
+<script src="js/bsg-social-share.js"></script>
+
+<script>
+console.info('🍻 Demo Social Sharing');
+
+var socialShare = new Bootstragram.SocialShare();
+
+socialShare.includeFacebook('1583382705225548', function() {
+  console.debug('Facebook script callbacked.');
+  socialShare.activateFacebook('#share-facebook', function(hasShared) {
+      console.debug('Share result: ', hasShared);
+    });
+});
+
+socialShare.includeTwitter(function() {
+  console.debug('Twitter script callbacked.');
+});
+
+</script>
+
+
+  
+</body>
+</html>

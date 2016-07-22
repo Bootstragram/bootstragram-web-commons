@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstragram Web Commons</title>
+    <meta name="description" content="A demo for Bootstragram Web Commons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstragram.min.css">
+    <link rel="stylesheet" href="css/bsg-float-animation.css">
+</head>
+<body>
+    
+    <style src="css/bsg-float-animation.css"></style>
+<style>
+.cloud {
+  width: 239px;
+  height: 176px;
+  background-image: url('assets/clouds.png');
+  animation: bsg-animation__float 10s infinite;
+
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+</style>
+
+<divclass="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Float animation</h1>
+      <div style="width: 100%; background-color: #eee; height: 400px; position: relative;">
+        <div class="cloud">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function() {
+});
+</script>
+
+  
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstragram Web Commons</title>
+    <meta name="description" content="A demo for Bootstragram Web Commons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstragram.min.css">
+    <link rel="stylesheet" href="css/bsg-float-animation.css">
+</head>
+<body>
+    
+    <style>
+#fullscreen {
+  background-color: blue;
+  width: 100%;
+  height: 640px;
+  background-image: url('https://unsplash.it/2000/1125/?random');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+</style>
+
+<div id="contentParent" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="fullscreen">
+        <h1>Demo Background Loading</h1>
+        <div style="width: 100%; height: 100%; text-align: center; color: white;">
+          <i id="spinner" class="fa fa-spinner fa-5x fa-spin"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waitforimages.min.js"></script>
+<script>
+$(function() {
+  var documentReadyStart = Date.now();
+  console.debug("Document ready");
+  $('#contentParent').waitForImages({
+    finished: function() {
+      console.debug("FINISHED");
+      $('#spinner').removeClass('fa-spin');
+    },
+    each: function() {
+      console.debug("ONE");
+    },
+    waitForAll: true
+  });
+  var documentReadyEnd = Date.now();
+  console.debug("Document ready: " + (documentReadyEnd - documentReadyStart));
+});
+</script>
+
+  
+</body>
+</html>
