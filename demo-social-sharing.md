@@ -32,7 +32,9 @@ var socialShare = new Bootstragram.SocialShare();
 
 socialShare.includeFacebook('1583382705225548', function() {
   console.debug('Facebook script callbacked.');
-  socialShare.activateFacebook();
+  socialShare.activateFacebook('#share-facebook', function(hasShared) {
+      console.debug('Share result: ', hasShared);
+    });
 });
 
 socialShare.includeTwitter(function() {

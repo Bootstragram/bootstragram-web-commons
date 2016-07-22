@@ -59,7 +59,7 @@ class Bootstragram.SocialShare
   @param {String} appID your Facebook Application ID
   @param {Bootstragram.SocialShare~includeSDKCallback} [callback] callback to be called once the SDK is loaded
   ###
-  @includeFacebook: (appID, callback) ->
+  includeFacebook: (appID, callback) ->
     $.getScript('//connect.facebook.net/en_US/sdk.js', () ->
       facebookInitOpts =
         appId: appID
