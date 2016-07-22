@@ -25,4 +25,4 @@ Don't use the followings as they create a tag that are conflicting. Git Flow is 
 
 ### Generate the documentation
 
-    jsdoc -c jsdoc.json -t ./node_modules/ink-docstrap/template -R jsdoc-README.md -r ~/Developer/build/bootstragram-web-commons-gh-pages/
+    rake bootstragram:jsdoc

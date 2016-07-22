@@ -18,9 +18,14 @@ namespace :bootstragram do
 
   desc "Create directories"
   task :create_dir do
-    sh "mkdir -p ~/Developer/build/bootstragram-web-commons-gh-pages"
+    sh "git clone -b gh-pages https://github.com/Bootstragram/bootstragram-web-commons.git ~/Developer/build/bootstragram-web-commons-gh-pages"
     sh "mkdir -p ~/Developer/build/bootstragram-web-commons-pow"
     sh "ln -Ffvs ~/Developer/build/bootstragram-web-commons-gh-pages ~/Developer/build/bootstragram-web-commons-pow/public"
     sh "cd ~/.pow && ln -s ~/Developer/build/bootstragram-web-commons-pow bootstragram-web-commons"
+  end
+
+  desc "Generate documentation"
+  task :jsdoc do
+    sh "jsdoc -c jsdoc.json -t ./node_modules/ink-docstrap/template -R jsdoc-README.md -r ~/Developer/build/bootstragram-web-commons-gh-pages/"
   end
 end
