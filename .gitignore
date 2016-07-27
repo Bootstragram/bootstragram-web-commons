@@ -1,6 +1,6 @@
 bower_components
 node_modules
-dist
+# dist should NOT be ignored.
 
 # Sass Shit
 .sass-cache

@@ -1,3 +1,7 @@
+---
+#
+---
+
 jQuery ->
     $.bootstragram = $.bootstragram || {}
 
@@ -6,7 +10,7 @@ jQuery ->
         this.canvasID = canvasID
         this.plainImageURL = plainImageURL
         this.multipliedImageURL = multipliedImageURL
-        
+
         # Options
         this.blendMode = options.blendMode || "multiply"
         this.verbose = options.verbose || false
@@ -16,9 +20,9 @@ jQuery ->
         this.multipliedImage = null
         this.canvas = document.getElementById(canvasID)
         this.context = this.canvas.getContext("2d")
-        
+
         this
-        
+
     # Preload images and call the callback when they are loaded
     $.bootstragram.canvasBlender.prototype.loadImages = (callback) ->
         console.debug "Downloading " + this.plainImageURL if this.verbose
@@ -32,7 +36,7 @@ jQuery ->
                 callback()
             blender.multipliedImage.src = blender.multipliedImageURL
         this.plainImage.src = this.plainImageURL
-                
+
     # Draw with the given alpha value
     $.bootstragram.canvasBlender.prototype.draw = (alphaValue) ->
         if (this.verbose)

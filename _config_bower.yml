@@ -1,0 +1,22 @@
+# Site settings
+destination: dist
+exclude:
+  - 'bower_components'
+  - 'node_modules'
+  - 'bower.json'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'Gruntfile.js'
+  - 'package.json'
+  - 'README.md'
+  - 'config'
+  - 'Rakefile'
+  - 'CHANGELOG.md'
+  - '.git'
+  - 'dist'
+  - 'jsdoc-README.md'
+  - 'jsdoc.json'
+  - 'CNAME'
+  - 'LICENSE'
+  - 'demo-*'
+  - '*.html'

@@ -4,7 +4,6 @@
   "dependencies": {
     "bower": "*",
     "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-sass": "*",

@@ -20,6 +20,15 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
+      bower: {
+        files: [{
+          expand: true,
+          cwd: 'js',
+          src: '*.js',
+          dest: 'js/min',
+          ext: '.min.js'
+        }]
+      },
       bootstragram: {
         files: {
           'js/min/bsg-umd-root.min.js': 'js/bsg-umd-root.js',
@@ -56,15 +65,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-    coffee: {
-      compile: {
-        files: {
-          '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee',
-          '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee',
-          '_javascript/bsg-animal.js': '_coffeescript/bsg-animal.js.coffee'
-        }
-      }
-    },
 
     sass: {                              // Task
       dist: {                            // Target
@@ -88,13 +88,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-sassdoc');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('javascript', [ 'coffee', 'uglify' ])
-  grunt.registerTask('default', [ 'less', 'coffee', 'uglify', 'copy' ]);
+  grunt.registerTask('javascript', [ 'uglify' ])
+  grunt.registerTask('default', [ 'less', 'uglify', 'copy' ]);
   grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
 
 };
