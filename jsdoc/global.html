@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>BSG WC JS Super Powers Class: SocialShare</title>
+	<title>BSG WC JS Super Powers Global</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -77,34 +77,14 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SocialShare</h1>
+	<h1 class="page-title">Global</h1>
 <section>
 
 <header>
     
         <h2>
-        SocialShare
-        </h2>
         
-            <div class="class-description"><p>This class helps integrating social networks sharing features without having
-to manually include the Facebook and Twitter SDK scripts inside your HTML.</p>
-<h2>Facebook</h2><p>Facebook integration works via a 2-step process. First, you include the SDK.
-Then, you indicate what elements of the DOM should trigger a Facebook share.</p>
-<p>Example:</p>
-<pre class="prettyprint source"><code>var socialShare = new Bootstragram.SocialShare();
-socialShare.includeFacebook('myFacebookAppID', function() {
-    socialShare.activateFacebook();
-});</code></pre><h2>Twitter</h2><p>Twitter integration is a single step process. You just have to include the SDK.
-The element triggering the share HAS to be a <code>&lt;a&gt;</code> element. A typical
-implemenation would be:</p>
-<pre class="prettyprint source"><code>&lt;a class=&quot;btn btn-default&quot; id=&quot;share-twitter&quot; href=&quot;https://twitter.com/intent/tweet?url=myURL&text=myText&via=myTwitter&quot;>
-    Share on Twitter
-&lt;/a>
-&lt;script>
-    var socialShare = new Bootstragram.SocialShare();
-    socialShare.includeTwitter();
-&lt;/script></code></pre><p>Cf. the <a href="https://dev.twitter.com/web/tweet-button/web-intent">Tweet Web Intent</a> documentation for details on building
-the Twitter URL on the <code>href</code>.</p></div>
+        </h2>
         
     
 </header>
@@ -114,9 +94,71 @@ the Twitter URL on the <code>href</code>.</p></div>
     <div class="container-overview">
     
         
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
 <hr>
 <dt>
-    <h4 class="name" id="SocialShare"><span class="type-signature"></span>new SocialShare()</h4>
+    <h4 class="name" id="getScript"><span class="type-signature"></span>getScript(source, callback)</h4>
     
     
 </dt>
@@ -129,6 +171,80 @@ the Twitter URL on the <code>href</code>.</p></div>
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Relative URL of the script's source.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Callback that will be called after the script is loaded.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -166,8 +282,8 @@ the Twitter URL on the <code>href</code>.</p></div>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-2">line 2</a>
+				<a href="js_bsg-get-script.js.html">js/bsg-get-script.js</a>,
+				 <a href="js_bsg-get-script.js.html#sunlight-1-line-25">line 25</a>
 			</li>
 		</ul>
 	</dd>
@@ -196,38 +312,16 @@ the Twitter URL on the <code>href</code>.</p></div>
     
 </dd>
 
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
+        
             
 <hr>
 <dt>
-    <h4 class="name" id="activateFacebook"><span class="type-signature"></span>activateFacebook( [selector] [, callback])</h4>
+    <h4 class="name" id="includeFacebook"><span class="type-signature"></span>includeFacebook(appID, callback [, selector])</h4>
     
     
 </dt>
 <dd>
 
-    
-    <div class="description">
-        <p>Activates DOM elements as triggers to share via the Facebook SDK.</p>
-    </div>
     
 
     
@@ -261,6 +355,78 @@ the Twitter URL on the <code>href</code>.</p></div>
     </thead>
 
     <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>appID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>your Facebook Application ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>callback</p></td>
+        </tr>
+
     
 
         <tr>
@@ -302,6 +468,116 @@ the Twitter URL on the <code>href</code>.</p></div>
         </tr>
 
     
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="js_bsg-social-share-es2015.js.html">js/bsg-social-share-es2015.js</a>,
+				 <a href="js_bsg-social-share-es2015.js.html#sunlight-1-line-57">line 57</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="includeTwitter"><span class="type-signature"></span>includeTwitter(callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
 
         <tr>
             
@@ -311,7 +587,7 @@ the Twitter URL on the <code>href</code>.</p></div>
             <td class="type">
             
                 
-<span class="param-type"><a href="Bootstragram.SocialShare.html#~shareCallback">Bootstragram.SocialShare~shareCallback</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -319,21 +595,7 @@ the Twitter URL on the <code>href</code>.</p></div>
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>callback</p></td>
@@ -380,342 +642,8 @@ the Twitter URL on the <code>href</code>.</p></div>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-82">line 82</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="includeFacebook"><span class="type-signature"></span>includeFacebook(appID [, callback])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Loads the Facebook SDK and inits it with your application ID.
-    Upon completion, an optional callback can be called.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>appID</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>your Facebook Application ID</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Bootstragram.SocialShare.html#~includeSDKCallback">Bootstragram.SocialShare~includeSDKCallback</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>callback to be called once the SDK is loaded</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-58">line 58</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="includeTwitter"><span class="type-signature"></span>includeTwitter( [callback])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Loads the Twitter SDK.
-    Upon completion, an optional callback can be called.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Bootstragram.SocialShare.html#~includeSDKCallback">Bootstragram.SocialShare~includeSDKCallback</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>callback to be called once the SDK is loaded</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-114">line 114</a>
+				<a href="js_bsg-social-share-es2015.js.html">js/bsg-social-share-es2015.js</a>,
+				 <a href="js_bsg-social-share-es2015.js.html#sunlight-1-line-101">line 101</a>
 			</li>
 		</ul>
 	</dd>
@@ -747,236 +675,6 @@ the Twitter URL on the <code>href</code>.</p></div>
         </dl>
     
 
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
-<hr>
-<dt>
-    <h4 class="name" id="~includeSDKCallback"><span class="type-signature"></span>includeSDKCallback()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>This callback does not accept arguments.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-45">line 45</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt>
-    <h4 class="name" id="~shareCallback"><span class="type-signature"></span>shareCallback(didShare)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>This is called after a share happened (Facebook support only).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>didShare</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p><code>true</code> if the user actually shared the content, <code>false</code> otherwise (cancellation for instance).</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="js_bsg-social-share.js.html">js/bsg-social-share.js</a>,
-				 <a href="js_bsg-social-share.js.html#sunlight-1-line-51">line 51</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-            </dl>
     
 
     

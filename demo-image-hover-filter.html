@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Image Hover Filter - Bootstragram Web Commons</title>
-    <meta name="description" content="A demo for Bootstragram's Blender Canvas">
+    <title></title>
+    <meta name="description" content="A demo for Bootstragram Web Commons">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstragram.min.css">
-    <style type="text/css">
-    .hovereffect {
+    <link rel="stylesheet" href="css/bsg-float-animation.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <style type="text/css">
+  .hovereffect {
     width:100%;
     height:100%;
     float:left;
@@ -21,9 +27,9 @@
     position:relative;
     text-align:center;
     cursor:default;
-    }
+  }
 
-    .hovereffect .overlay {
+  .hovereffect .overlay {
     width:100%;
     height:100%;
     position:absolute;
@@ -34,15 +40,15 @@
     background-color:rgba(0,0,0,0.5);
     -webkit-transition:all .4s ease-in-out;
     transition:all .4s ease-in-out
-    }
+  }
 
-    .hovereffect img {
+  .hovereffect img {
     display:block;
     position:relative;
     -webkit-filter: brightness(0.8) grayscale(1) invert(0.3);
     -webkit-transition:all .4s linear;
     transition:all .4s linear;
-    }
+  }
 
     .hovereffect h2 {
     text-transform:uppercase;
@@ -102,38 +108,39 @@
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
     }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Image Hover Filter Demo</h1>
-        <div class="row">
-            <div class="col-md-8">
-                <h2>Image</h2>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="http://unsplash.it/800/450?image=693&gravity=north" alt="A random image for the demo">
-                    <div class="overlay">
-                        <h2>Totally inspired by this <a href="http://miketricking.github.io/dist/">Hover Gallery</a></h2>
-                        <a class="info" href="#">link here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h2></h2>
-                <div>
-                    <input type="range" name="alpha" min="0" max="100">
-                </div>
+</style>
+
+<h1>Image Hover Filter Demo</h1>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Image</h2>
+        <div class="hovereffect">
+            <img class="img-responsive" src="http://unsplash.it/800/450?image=693&gravity=north" alt="A random image for the demo">
+            <div class="overlay">
+                <h2>Totally inspired by this <a href="http://miketricking.github.io/dist/">Hover Gallery</a></h2>
+                <a class="info" href="#">link here</a>
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <h2></h2>
+        <div>
+            <input type="range" name="alpha" min="0" max="100">
+        </div>
+    </div>
+</div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bsg-blender-canvas.min.js"></script>
-    <script>
-    $(function() {
-        console.log("Start");
-    });
-    </script>
+<script src="vendor/js/min/jquery.min.js"></script>
+<script src="vendor/js/min/bootstrap.min.js"></script>
+<script src="js/bsg-blender-canvas.js"></script>
+<script>
+$(function() {
+    console.log("Start");
+});
+</script>
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>

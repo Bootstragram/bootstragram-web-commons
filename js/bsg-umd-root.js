@@ -17,7 +17,7 @@
 }(this, function () {
   "use strict";
   var Bootstragram = {};
-  Bootstragram.version = "1.1.1";
+  Bootstragram.version = "1.1.2";
 
   console.debug('🍺 Bootstragram Super Powered (version ' + Bootstragram.version + ')');
 

@@ -10,30 +10,31 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstragram.min.css">
 </head>
 <body>
-  
+
     <p>Empty page to check JS loading.</p>
-    
+
     <p>Errors:</p>
     <ol id="errors"></ol>
-  
+
     <script>
     window.onerror = function(error) {
-        var p = document.getElementById("errors");
-        var newError = document.createElement("li");
-        newError.appendChild(document.createTextNode(error));
-        p.appendChild(newError);
+      console.error("Error found");
+      var p = document.getElementById("errors");
+      var newError = document.createElement("li");
+      newError.appendChild(document.createTextNode(error));
+      p.appendChild(newError);
     };
     </script>
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="vendor/js/min/jquery.min.js"><\/script>')</script>
     <!-- <script src="js/plugins.js"></script> -->
     <!-- <script src="js/main.js"></script> -->
-    <script src="_javascript/bootstragram.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstragram.js"></script>
+    <script src="vendor/js/min/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://webcommons.bootstragram.com/demo-animal</loc>
+  </url>
+  <url>
     <loc>http://webcommons.bootstragram.com/demo-background-loading</loc>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/demo-blender-canvas</loc>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/demo-butterfly-animation</loc>
@@ -16,46 +22,72 @@
     <loc>http://webcommons.bootstragram.com/demo-comete-animation</loc>
   </url>
   <url>
+    <loc>http://webcommons.bootstragram.com/demo-image-hover-filter</loc>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/demo-social-sharing-es2015</loc>
+  </url>
+  <url>
     <loc>http://webcommons.bootstragram.com/demo-social-sharing</loc>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/</loc>
   </url>
   <url>
-    <loc>http://webcommons.bootstragram.com/demo-animal.html</loc>
-    <lastmod>2016-06-05T10:18:46-04:00</lastmod>
-  </url>
-  <url>
-    <loc>http://webcommons.bootstragram.com/demo-blender-canvas.html</loc>
-    <lastmod>2016-07-22T17:19:26-04:00</lastmod>
-  </url>
-  <url>
-    <loc>http://webcommons.bootstragram.com/demo-image-hover-filter.html</loc>
-    <lastmod>2016-07-22T17:19:26-04:00</lastmod>
-  </url>
-  <url>
     <loc>http://webcommons.bootstragram.com/empty.html</loc>
-    <lastmod>2016-06-05T10:18:46-04:00</lastmod>
+    <lastmod>2016-07-27T19:13:13-04:00</lastmod>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/Bootstragram.SocialShare.html</loc>
-    <lastmod>2016-07-22T17:28:30-04:00</lastmod>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/bsg-get-script.js.html</loc>
+    <lastmod>2016-07-27T18:06:20-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/bsgGetScript.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/bsgSocialShare.html</loc>
+    <lastmod>2016-07-27T19:17:26-04:00</lastmod>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/classes.list.html</loc>
-    <lastmod>2016-07-22T17:28:30-04:00</lastmod>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/dist_js_bsg-social-share.js.html</loc>
     <lastmod>2016-07-22T17:28:30-04:00</lastmod>
   </url>
   <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/global.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/index.html</loc>
-    <lastmod>2016-07-22T17:28:30-04:00</lastmod>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/js_bsg-get-script.js.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/js_bsg-social-share-es2015.js.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/js_bsg-social-share.js.html</loc>
-    <lastmod>2016-07-22T17:28:30-04:00</lastmod>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/jsdoc_scripts_fulltext-search-ui.js.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/namespaces.list.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/out_scripts_fulltext-search-ui.js.html</loc>
@@ -63,6 +95,10 @@
   </url>
   <url>
     <loc>http://webcommons.bootstragram.com/jsdoc/quicksearch.html</loc>
-    <lastmod>2016-07-22T17:28:30-04:00</lastmod>
+    <lastmod>2016-07-27T19:17:26-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://webcommons.bootstragram.com/jsdoc/vendor_js_jquery.js.html</loc>
+    <lastmod>2016-07-27T19:17:25-04:00</lastmod>
   </url>
 </urlset>

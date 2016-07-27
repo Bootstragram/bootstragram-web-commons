@@ -20,9 +20,9 @@
       <div class="col-md-12">
         <h1 id="social-sharing-demo">Social Sharing Demo</h1>
 
-<p>Cf. <a href="http://webcommons.bootstragram.com/jsdoc/Bootstragram.SocialShare.html">documentation</a>.</p>
+<p>Cf. <a href="http://webcommons.bootstragram.com/jsdoc/bsgSocialShare.html">documentation</a>.</p>
 
-<p>Cf. <a href="demo-social-sharing-es2015.html">ES2015 alternative</a>.</p>
+<p>Cf. <a href="demo-social-sharing.html">CoffeeScript Bootstragram’s UMD alternative</a>.</p>
 
 <h2 id="facebook">Facebook</h2>
 
@@ -32,6 +32,8 @@
 
 <h2 id="twitter">Twitter</h2>
 
+<p>The markup for Twitter requires a <code class="highlighter-rouge">a</code> element.</p>
+
 <p><a class="btn btn-default" id="share-twitter" href="https://twitter.com/intent/tweet?url=https://bootstragram.com&amp;text=Coucou&amp;via=Bootstragram">
   Share on Twitter
 </a></p>
@@ -40,23 +42,18 @@
 
 <script src="vendor/js/min/bootstrap.min.js"></script>
 
-<script src="js/bsg-umd-root.js"></script>
+<script src="js/bsg-get-script.js"></script>
 
-<script src="js/bsg-social-share.js"></script>
+<script src="js/bsg-social-share-es2015.js"></script>
 
 <script>
 console.info('🍻 Demo Social Sharing');
 
-var socialShare = new Bootstragram.SocialShare();
-
-socialShare.includeFacebook('1583382705225548', function() {
-  console.debug('Facebook script callbacked.');
-  socialShare.activateFacebook('#share-facebook', function(hasShared) {
-      console.debug('Share result: ', hasShared);
-    });
+bsgSocialShare.includeFacebook('1583382705225548', function(hasShared) {
+  console.debug('Share result: ', hasShared);
 });
 
-socialShare.includeTwitter(function() {
+bsgSocialShare.includeTwitter(function() {
   console.debug('Twitter script callbacked.');
 });
 
