@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
+    babel: {
+      dist: {
+        files: {
+          'js/bsg-get-script.js': '_es2015/bsg-get-script.js',
+          'js/bsg-social-share-es2015.js': '_es2015/bsg-social-share.js'
+        }
+      }
+    },
     less: {
       production: {
         options: {
@@ -13,15 +20,15 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      bootstragram: {
-        files: {
-          'js/min/bsg-umd-root.min.js': 'js/bsg-umd-root.js',
-          'js/min/bsg-social-share.min.js': 'js/bsg-social-share.js',
-          'js/bootstragram.min.js': '_javascript/bootstragram.js',
-          'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
-          'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
-        }
-      }
+      bower: {
+        files: [{
+          expand: true,
+          cwd: 'dist/js',
+          src: '*.js',
+          dest: 'dist/js/min',
+          ext: '.min.js'
+        }]
+      },
     },
     copy: {
       fontawesome: {
@@ -32,30 +39,21 @@ module.exports = function(grunt) {
       },
       waitForImages: {
         files: [
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: 'vendor/js'},
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'vendor/js/min'}
         ]
       },
       jQuery: {
         files: [
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: 'vendor/js/'},
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'vendor/js/min'}
         ]
       },
       bootstrap: {
         files: [
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: 'vendor/js'},
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'vendor/js/min'}
         ]
-      }
-    },
-    coffee: {
-      compile: {
-        files: {
-          '_javascript/bootstragram.js': '_coffeescript/bootstragram.js.coffee',
-          '_javascript/bsg-blender-canvas.js': '_coffeescript/bsg-blender-canvas.js.coffee',
-          '_javascript/bsg-animal.js': '_coffeescript/bsg-animal.js.coffee'
-        }
       }
     },
 
@@ -77,16 +75,13 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-sassdoc');
-  grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('javascript', [ 'coffee', 'uglify' ])
-  grunt.registerTask('default', [ 'less', 'coffee', 'uglify', 'copy' ]);
-  grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
-
+  grunt.registerTask('bower', [ 'uglify:bower' ])
+  grunt.registerTask('default', [ 'less', 'copy' ]);
 };

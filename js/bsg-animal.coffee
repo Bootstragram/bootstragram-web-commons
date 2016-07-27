@@ -1,5 +1,9 @@
+---
+#
+---
+
 jQuery ->
-  
+
   class Bootstragram.Animal
     constructor: (@name) ->
       return

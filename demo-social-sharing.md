@@ -1,28 +1,28 @@
 ---
-layout: default
+layout: demo
 ---
 
 # Social Sharing Demo
 
-`bsg-social-share.js` requires `bsg-umd-root.min.js` and `jquery`.
+Cf. [documentation][SocialShareDoc].
+
+Cf. [ES2015 alternative](demo-social-sharing-es2015.html).
 
 ## Facebook
 
-<button class="btn btn-default" id="share-facebook" data-link="http://bootstragram-web-commons.dev/demo-social-sharing.html">
+<a class="btn btn-default" id="share-facebook" data-link="http://bootstragram-web-commons.dev/demo-social-sharing.html">
   Share on Facebook
-</button>
+</a>
 
 ## Twitter
-
-The markup for Twitter requires a `a` element.
 
 <a class="btn btn-default" id="share-twitter" href="https://twitter.com/intent/tweet?url=https://bootstragram.com&text=Coucou&via=Bootstragram">
   Share on Twitter
 </a>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="vendor/js/min/jquery.min.js"></script>
+<script src="vendor/js/min/bootstrap.min.js"></script>
 <script src="js/bsg-umd-root.js"></script>
 <script src="js/bsg-social-share.js"></script>
 <script>
@@ -42,3 +42,6 @@ socialShare.includeTwitter(function() {
 });
 
 </script>
+
+
+[SocialShareDoc]: http://webcommons.bootstragram.com/jsdoc/Bootstragram.SocialShare.html
