@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
+    babel: {
+      dist: {
+        files: {
+          'js/bsg-get-script.js': '_es2015/bsg-get-script.js',
+          'js/bsg-social-share-es2015.js': '_es2015/bsg-social-share.js'
+        }
+      }
+    },
     less: {
       production: {
         options: {
@@ -77,6 +84,7 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
