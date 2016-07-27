@@ -23,9 +23,9 @@ module.exports = function(grunt) {
       bower: {
         files: [{
           expand: true,
-          cwd: 'js',
+          cwd: 'dist/js',
           src: '*.js',
-          dest: 'js/min',
+          dest: 'dist/js/min',
           ext: '.min.js'
         }]
       },
