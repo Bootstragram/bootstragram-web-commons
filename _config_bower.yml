@@ -21,6 +21,7 @@ exclude:
   - 'demo-*'
   - '*.html'
   - 'sitemap.xml'
+  - 'vendor'
 
 gems:
   - jekyll-coffeescript
