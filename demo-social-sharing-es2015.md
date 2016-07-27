@@ -23,8 +23,8 @@ The markup for Twitter requires a `a` element.
 </a>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="vendor/js/min/jquery.min.js"></script>
+<script src="vendor/js/min/bootstrap.min.js"></script>
 <script src="js/bsg-get-script.js"></script>
 <script src="js/bsg-social-share-es2015.js"></script>
 <script>

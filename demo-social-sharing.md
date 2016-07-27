@@ -21,8 +21,8 @@ Cf. [ES2015 alternative](demo-social-sharing-es2015.html).
 </a>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="vendor/js/min/jquery.min.js"></script>
+<script src="vendor/js/min/bootstrap.min.js"></script>
 <script src="js/bsg-umd-root.js"></script>
 <script src="js/bsg-social-share.js"></script>
 <script>

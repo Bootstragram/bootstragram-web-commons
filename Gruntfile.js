@@ -29,15 +29,6 @@ module.exports = function(grunt) {
           ext: '.min.js'
         }]
       },
-      bootstragram: {
-        files: {
-          'js/min/bsg-umd-root.min.js': 'js/bsg-umd-root.js',
-          'js/min/bsg-social-share.min.js': 'js/bsg-social-share.js',
-          'js/bootstragram.min.js': '_javascript/bootstragram.js',
-          'js/bsg-blender-canvas.min.js': '_javascript/bsg-blender-canvas.js',
-          'js/bsg-animal.min.js': '_javascript/bsg-animal.js'
-        }
-      }
     },
     copy: {
       fontawesome: {
@@ -48,20 +39,20 @@ module.exports = function(grunt) {
       },
       waitForImages: {
         files: [
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: 'vendor/js'},
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'vendor/js/min'}
         ]
       },
       jQuery: {
         files: [
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: 'vendor/js/'},
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'vendor/js/min'}
         ]
       },
       bootstrap: {
         files: [
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: '_javascript/'},
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'js/'}
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: 'vendor/js'},
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'vendor/js/min'}
         ]
       }
     },
@@ -90,10 +81,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-sassdoc');
-  grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('javascript', [ 'uglify' ])
-  grunt.registerTask('default', [ 'less', 'uglify', 'copy' ]);
-  grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
-
+  grunt.registerTask('bower', [ 'uglify:bower' ])
+  grunt.registerTask('default', [ 'less', 'copy' ]);
 };
