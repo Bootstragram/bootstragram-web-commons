@@ -5,18 +5,16 @@
  *
  * ## Typical Implementation
  *
- * ```
- * <script src="js/bsg-get-script.js"></script>
- * <script src="js/bsg-social-share-es2015.js"></script>
- * <script>
- * bsgSocialShare.includeFacebook('1583382705225548', function(hasShared) {
- *   console.debug('Share result: ', hasShared);
- * });
- * bsgSocialShare.includeTwitter(function() {
- *   console.debug('Twitter script callbacked.');
- * });
- * </script>
- * ```
+ *     <script src="js/bsg-get-script.js"></script>
+ *     <script src="js/bsg-social-share-es2015.js"></script>
+ *     <script>
+ *     bsgSocialShare.includeFacebook('1583382705225548', function(hasShared) {
+ *       console.debug('Share result: ', hasShared);
+ *     });
+ *     bsgSocialShare.includeTwitter(function() {
+ *       console.debug('Twitter script callbacked.');
+ *     });
+ *     </script>
  *
  * @namespace bsgSocialShare
  */

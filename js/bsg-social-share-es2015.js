@@ -67,17 +67,16 @@
    *
    * ## Typical Implementation
    *
-   * ```
-   * <script src="js/bsg-get-script.js"></script>
-   * <script src="js/bsg-social-share-es2015.js"></script>
-   * <script>
-   * bsgSocialShare.includeFacebook('1583382705225548', function(hasShared) {
-   *   console.debug('Share result: ', hasShared);
-   * });
-   * bsgSocialShare.includeTwitter(function() {
-   *   console.debug('Twitter script callbacked.');
-   * });
-   * </script>
+   *     <script src="js/bsg-get-script.js"></script>
+   *     <script src="js/bsg-social-share-es2015.js"></script>
+   *     <script>
+   *     bsgSocialShare.includeFacebook('1583382705225548', function(hasShared) {
+   *       console.debug('Share result: ', hasShared);
+   *     });
+   *     bsgSocialShare.includeTwitter(function() {
+   *       console.debug('Twitter script callbacked.');
+   *     });
+   *     </script>
    *
    * @namespace bsgSocialShare
    */
@@ -86,7 +85,6 @@
     var selector = arguments.length <= 2 || arguments[2] === undefined ? '#share-facebook' : arguments[2];
 
     (0, _bsgGetScript2.default)("//connect.facebook.net/en_US/sdk.js", function () {
-      console.debug("YEAH");
       var facebookInitOpts = {
         appId: appID,
         version: 'v2.7',
