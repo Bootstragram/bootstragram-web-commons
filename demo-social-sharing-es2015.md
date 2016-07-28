@@ -10,7 +10,7 @@ Cf. [CoffeeScript Bootstragram's UMD alternative](demo-social-sharing.html).
 
 ## Facebook
 
-<a class="btn btn-default" id="share-facebook" data-link="http://bootstragram-web-commons.dev/demo-social-sharing.html">
+<a class="btn btn-default" id="share-facebook" data-link="http://webcommons.bootstragram.com">
   Share on Facebook
 </a>
 
@@ -18,7 +18,7 @@ Cf. [CoffeeScript Bootstragram's UMD alternative](demo-social-sharing.html).
 
 The markup for Twitter requires a `a` element.
 
-<a class="btn btn-default" id="share-twitter" href="https://twitter.com/intent/tweet?url=https://bootstragram.com&text=Coucou&via=Bootstragram">
+<a class="btn btn-default" id="share-twitter" href="https://twitter.com/intent/tweet?url=http://webcommons.bootstragram.com&text=SuperPowers&via=Bootstragram">
   Share on Twitter
 </a>
 

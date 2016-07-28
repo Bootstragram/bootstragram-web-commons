@@ -20,6 +20,19 @@
 *         socialShare.activateFacebook();
 *     });
 *
+* ### Open Graph data
+*
+* For a proper implementation, those headers should appear in the `<head>` of your document:
+*
+*     <meta property="og:site_name" content="AAA">
+*     <meta property="og:title" content="BBB">
+*     <meta property="og:url" content="CCC">
+*     <meta property="og:description" content="DDD">
+*     <meta property="og:type" content="...">
+*     <meta property="og:locale" content="...">
+*     <meta property="og:image" content="...">
+*     <meta property="fb:app_id" content="...">
+*
 * ## Twitter
 *
 * Twitter integration is a single step process. You just have to include the SDK.
