@@ -10,9 +10,9 @@
     "bootstragram"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.1",
     "components-font-awesome": ">=4.0",
-    "waitForImages": "*"
+    "waitForImages": "*",
+    "bootstrap-sass": "^3.3.7"
   },
   "license": "MIT",
   "homepage": "http://bootstragram.com",

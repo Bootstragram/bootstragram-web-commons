@@ -2,8 +2,8 @@
 title: Bootstragram Web Commons
 description: > # this means to ignore newlines until "baseurl:"
   A great collection of web commons. By Bootstragram.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://webcommons.bootstragram.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://bootstragram-web-commons.dev" # the base hostname & protocol for your site
 twitter_username: bootstragram
 facebook_pagename: bootstragram
 destination: ~/Developer/build/bootstragram-web-commons-gh-pages
@@ -18,3 +18,8 @@ exclude: [ 'bower_components', 'node_modules', 'bower.json', 'Gemfile', 'Gemfile
 gems:
   - jekyll-sitemap
   - jekyll-coffeescript
+
+sass:
+  load_paths:
+    - _sass
+    - bower_components/bootstrap-sass/assets/stylesheets

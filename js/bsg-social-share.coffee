@@ -20,7 +20,7 @@
 *         socialShare.activateFacebook();
 *     });
 *
-* ### Open Graph data
+* Open Graph data:
 *
 * For a proper implementation, those headers should appear in the `<head>` of your document:
 *

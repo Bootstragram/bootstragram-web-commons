@@ -33,26 +33,23 @@ module.exports = function(grunt) {
     copy: {
       fontawesome: {
         files: [
-          {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.min.css'], dest: 'assets/css/'},
-          {expand: true, cwd: 'bower_components/components-font-awesome/fonts/', src: ['*'], dest: 'assets/fonts/'}
+          {expand: true, cwd: 'bower_components/components-font-awesome/css/', src: ['font-awesome.min.css'], dest: 'vendor/assets/css/'},
+          {expand: true, cwd: 'bower_components/components-font-awesome/fonts/', src: ['*'], dest: 'vendor/assets/fonts/'}
         ]
       },
       waitForImages: {
         files: [
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.js'], dest: 'vendor/js'},
-          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages.min.js'], dest: 'vendor/js/min'}
+          {expand: true, cwd: 'bower_components/waitForImages/dist/', src: ['jquery.waitforimages*.js'], dest: 'vendor/assets/js'}
         ]
       },
       jQuery: {
         files: [
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.js'], dest: 'vendor/js/'},
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'vendor/js/min'}
+          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.*.js'], dest: 'vendor/assets/js/'},
         ]
       },
       bootstrap: {
         files: [
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.js'], dest: 'vendor/js'},
-          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'vendor/js/min'}
+          {expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['bootstrap.*.js'], dest: 'vendor/assets/js'},
         ]
       }
     },
