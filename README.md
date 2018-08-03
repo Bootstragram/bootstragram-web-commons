@@ -4,6 +4,7 @@ This is Bootstragram's Bower package to bootstrap all our web projects.
 
 ## Installation
 
+    bundle install
     npm install
     bower install
 

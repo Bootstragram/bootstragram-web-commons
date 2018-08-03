@@ -2,15 +2,8 @@
   "name": "bootstragram-web-commons",
   "version": "1.1.2",
   "dependencies": {
-    "bower": "*",
-    "grunt": "~0.4.1",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-sass": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-exec": "*",
-    "grunt-sassdoc": "*",
-    "ink-docstrap": "^1.2.1"
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "bootstrap": "^4.1.3"
   },
   "engines": {
     "npm": "1.3.x"
@@ -19,10 +12,5 @@
     "type": "git",
     "url": "git://github.com/Bootstragram/bootstragram-web-commons.git"
   },
-  "devDependencies": {
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-es2015-modules-umd": "^6.12.0",
-    "babel-preset-es2015": "^6.9.0",
-    "grunt-babel": "^6.0.0"
-  }
+  "devDependencies": {}
 }

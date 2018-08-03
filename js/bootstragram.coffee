@@ -68,7 +68,7 @@ jQuery ->
             window.location.href = $(this).data('href')
         )
 
-    # Call resizeJumbotron only when iamges are loaded
+    # Call resizeJumbotron only when images are loaded
     # cf. http://stackoverflow.com/questions/544993/official-way-to-ask-jquery-wait-for-all-images-to-load-before-executing-somethin
     # cf. issue #13
     $(window).load () ->

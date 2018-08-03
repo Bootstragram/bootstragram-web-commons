@@ -15,6 +15,5 @@ markdown: kramdown
 permalink:  /:title.html
 exclude: [ 'bower_components', 'node_modules', 'bower.json', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json', 'README.md', 'config', 'Rakefile', 'CHANGELOG.md', '.git', 'dist', 'jsdoc-README.md', 'jsdoc.json']
 
-gems:
+plugins:
   - jekyll-sitemap
-  - jekyll-coffeescript
